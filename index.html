@@ -1,0 +1,2702 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Đào Như Quỳnh | Portfolio Marketing & Truyền thông</title>
+    <meta name="description" content="Portfolio cá nhân của Lê Đào Như Quỳnh - Sinh viên chuyên ngành Marketing & Truyền thông - HSB - ĐHQGHN">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --clr-bg: #FCFAF6; /* Kem trắng / Warm Cream */
+            --clr-bg-alt: #F5EFE4; /* Kem cát / Warm Sand */
+            --clr-surface: rgba(255, 255, 255, 0.85); /* Glass card background */
+            --clr-accent-1: #B06A57; /* Rose Terracotta / Mocha Rose */
+            --clr-accent-2: #C88F78; /* Soft Salmon / Blush Apricot */
+            --clr-accent-3: #DBA38C; /* Warm Gold / Champagne */
+            --clr-accent-4: #806053; /* Warm Cocoa */
+            --clr-text: #4E3E37; /* Coffee Gray */
+            --clr-text-muted: #8E7C73; /* Muted Cocoa */
+            --clr-white: #ffffff;
+            --clr-heading: #2D1E17; /* Dark Chocolate */
+            --clr-border: rgba(138, 109, 96, 0.12); /* Subtle mocha border */
+            --clr-glow: rgba(176, 106, 87, 0.15);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background: var(--clr-bg);
+            color: var(--clr-text);
+            overflow-x: hidden;
+            line-height: 1.8;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(219, 163, 140, 0.05), transparent 45%),
+                radial-gradient(circle at 90% 80%, rgba(176, 106, 87, 0.06), transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(128, 96, 83, 0.03), transparent 60%);
+            background-attachment: fixed;
+        }
+
+        /* ===== CANVAS BACKGROUND ===== */
+        #particles-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.2rem 0;
+            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        nav.scrolled {
+            background: rgba(252, 250, 246, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--clr-border);
+            padding: 0.8rem 0;
+            box-shadow: 0 4px 20px rgba(78, 62, 55, 0.02);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            font-style: italic;
+            background: linear-gradient(135deg, var(--clr-accent-1), var(--clr-accent-4));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--clr-text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.92rem;
+            position: relative;
+            padding: 0.3rem 0;
+            transition: color 0.3s;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--clr-accent-1);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover {
+            color: var(--clr-accent-1);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--clr-heading);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        section {
+            position: relative;
+            z-index: 1;
+            padding: 8rem 0;
+        }
+
+        /* ===== SECTION HEADER ===== */
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.4rem;
+            border-radius: 50px;
+            border: 1px solid var(--clr-border);
+            background: rgba(176, 106, 87, 0.05);
+            color: var(--clr-accent-1);
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-bottom: 1.2rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+            font-weight: 700;
+            color: var(--clr-heading);
+            margin-bottom: 1.2rem;
+            line-height: 1.2;
+        }
+
+        .section-title .gradient-text {
+            font-style: italic;
+            background: linear-gradient(135deg, var(--clr-accent-1), var(--clr-accent-4));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            color: var(--clr-text-muted);
+            max-width: 600px;
+            font-size: 1.05rem;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        /* ===== ANIMATED DIVIDER ===== */
+        .divider {
+            width: 70px;
+            height: 3px;
+            border-radius: 3px;
+            background: linear-gradient(90deg, var(--clr-accent-1), var(--clr-accent-3));
+            margin: 1.5rem auto 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .divider::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+            animation: shimmer 2.5s infinite;
+        }
+
+        @keyframes shimmer {
+            100% { left: 100%; }
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 8rem 0 6rem 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-left {
+            z-index: 2;
+        }
+
+        .hero-greeting {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--clr-accent-1);
+            margin-bottom: 0.6rem;
+            letter-spacing: 1px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease forwards 0.3s;
+        }
+
+        .hero-name {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 6vw, 4.8rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.2rem;
+            color: var(--clr-heading);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease forwards 0.5s;
+        }
+
+        .hero-name .gradient-text {
+            background: linear-gradient(135deg, var(--clr-accent-1) 0%, var(--clr-accent-4) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-role {
+            font-size: 1.3rem;
+            color: var(--clr-accent-4);
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            min-height: 1.8em;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease forwards 0.7s;
+        }
+
+        .hero-role .typing-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background: var(--clr-accent-1);
+            margin-left: 5px;
+            vertical-align: text-bottom;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .hero-bio {
+            font-size: 1.05rem;
+            color: var(--clr-text-muted);
+            margin-bottom: 3rem;
+            border-left: 2.5px solid var(--clr-accent-1);
+            padding-left: 1.5rem;
+            line-height: 1.9;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease forwards 0.9s;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease forwards 1.1s;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hero Right (Avatar Frame) */
+        .hero-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-avatar-frame {
+            position: relative;
+            width: 380px;
+            height: 380px;
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            overflow: hidden;
+            border: 4px solid var(--clr-white);
+            box-shadow: 0 15px 35px rgba(78, 62, 55, 0.08);
+            background: var(--clr-bg-alt);
+            animation: morph 8s ease-in-out infinite alternate, floatAvatar 6s ease-in-out infinite;
+            transition: all 0.5s ease;
+        }
+
+        .hero-avatar-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.05);
+            transition: transform 0.8s ease;
+        }
+
+        .hero-avatar-frame:hover img {
+            transform: scale(1.15);
+        }
+
+        @keyframes morph {
+            0% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            }
+            100% {
+                border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
+            }
+        }
+
+        @keyframes floatAvatar {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Decorative Floating Elements */
+        .floating-badge {
+            position: absolute;
+            background: var(--clr-surface);
+            border: 1px solid var(--clr-border);
+            padding: 0.8rem 1.4rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(78, 62, 55, 0.04);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 600;
+            color: var(--clr-heading);
+            font-size: 0.88rem;
+            z-index: 3;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            animation: floatBadge 6s ease-in-out infinite;
+        }
+
+        .fb-1 {
+            top: 10%;
+            left: -5%;
+            animation-delay: 0s;
+        }
+
+        .fb-2 {
+            bottom: 15%;
+            right: -5%;
+            animation-delay: 1.5s;
+        }
+
+        .fb-3 {
+            bottom: 5%;
+            left: 5%;
+            animation-delay: 3s;
+        }
+
+        .floating-badge i {
+            color: var(--clr-accent-1);
+            font-size: 1.1rem;
+        }
+
+        @keyframes floatBadge {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(2deg); }
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 0.95rem 2.2rem;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            font-family: inherit;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--clr-accent-1), var(--clr-accent-4));
+            color: var(--clr-white);
+            box-shadow: 0 4px 20px rgba(176, 106, 87, 0.25);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(176, 106, 87, 0.35);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.6);
+            color: var(--clr-accent-4);
+            border: 1px solid var(--clr-border);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(176, 106, 87, 0.08);
+            border-color: var(--clr-accent-1);
+            color: var(--clr-accent-1);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(176, 106, 87, 0.05);
+        }
+
+        /* ===== GLOW CARD ===== */
+        .glow-card {
+            position: relative;
+            background: var(--clr-surface);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 24px;
+            padding: 2.8rem;
+            border: 1px solid var(--clr-border);
+            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(78, 62, 55, 0.02);
+        }
+
+        .glow-card::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 24px;
+            padding: 1.5px;
+            background: linear-gradient(135deg, transparent, var(--clr-accent-2), transparent, var(--clr-accent-1), transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .glow-card:hover::before {
+            opacity: 1;
+        }
+
+        .glow-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(176, 106, 87, 0.25);
+            box-shadow: 0 20px 45px rgba(78, 62, 55, 0.05), 0 0 35px rgba(176, 106, 87, 0.03);
+        }
+
+        .card-icon-wrap {
+            width: 58px;
+            height: 58px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 1.6rem;
+            position: relative;
+            transition: transform 0.4s;
+        }
+
+        .glow-card:hover .card-icon-wrap {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .icon-accent-1 {
+            background: rgba(176, 106, 87, 0.08);
+            color: var(--clr-accent-1);
+            border: 1px solid rgba(176, 106, 87, 0.15);
+        }
+
+        .icon-accent-2 {
+            background: rgba(200, 143, 120, 0.08);
+            color: var(--clr-accent-2);
+            border: 1px solid rgba(200, 143, 120, 0.15);
+        }
+
+        .icon-accent-4 {
+            background: rgba(128, 96, 83, 0.08);
+            color: var(--clr-accent-4);
+            border: 1px solid rgba(128, 96, 83, 0.15);
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--clr-heading);
+            margin-bottom: 0.8rem;
+        }
+
+        .card-text {
+            color: var(--clr-text-muted);
+            font-size: 0.93rem;
+            line-height: 1.8;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .profile-card {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+            padding: 3.5rem;
+        }
+
+        .profile-avatar-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, var(--clr-accent-1), var(--clr-accent-3), var(--clr-accent-4));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            color: white;
+            position: relative;
+            animation: avatarPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes avatarPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(176, 106, 87, 0.25); }
+            50% { box-shadow: 0 0 0 15px rgba(176, 106, 87, 0); }
+        }
+
+        .profile-details h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--clr-heading);
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+        }
+
+        .profile-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            font-size: 0.96rem;
+            color: var(--clr-text-muted);
+        }
+
+        .profile-info-item i {
+            width: 22px;
+            text-align: center;
+            color: var(--clr-accent-1);
+            font-size: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        .profile-info-item strong {
+            color: var(--clr-heading);
+        }
+
+        .profile-info-item a {
+            color: var(--clr-accent-1);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .profile-info-item a:hover {
+            color: var(--clr-accent-4);
+        }
+
+        /* ===== GRID LAYOUTS ===== */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        /* ===== EXERCISES ===== */
+        .exercise-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .exercise-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.4rem 2.2rem;
+            background: var(--clr-surface);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid var(--clr-border);
+            text-decoration: none;
+            color: var(--clr-text);
+            transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(78, 62, 55, 0.01);
+            cursor: pointer;
+        }
+
+        .exercise-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(180deg, var(--clr-accent-1), var(--clr-accent-3));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .exercise-item:hover::before {
+            opacity: 1;
+        }
+
+        .exercise-item:hover {
+            transform: translateX(10px);
+            background: rgba(176, 106, 87, 0.03);
+            border-color: rgba(176, 106, 87, 0.2);
+            box-shadow: 0 10px 30px rgba(78, 62, 55, 0.05);
+        }
+
+        .exercise-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex: 1;
+        }
+
+        .exercise-num {
+            width: 46px;
+            height: 46px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.1rem;
+            background: rgba(176, 106, 87, 0.06);
+            color: var(--clr-accent-1);
+            border: 1px solid rgba(176, 106, 87, 0.12);
+            flex-shrink: 0;
+        }
+
+        .exercise-meta {
+            flex: 1;
+        }
+
+        .exercise-meta h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--clr-heading);
+            margin-bottom: 0.3rem;
+        }
+
+        .exercise-meta span {
+            font-size: 0.8rem;
+            color: var(--clr-text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .exercise-desc {
+            color: var(--clr-text-muted);
+            font-size: 0.88rem;
+            margin-top: 0.4rem;
+            line-height: 1.6;
+        }
+
+        .exercise-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .exercise-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.2s;
+        }
+
+        .ex-read {
+            background: rgba(176, 106, 87, 0.08);
+            color: var(--clr-accent-1);
+        }
+
+        .ex-read:hover {
+            background: var(--clr-accent-1);
+            color: var(--clr-white);
+        }
+
+        .ex-download {
+            background: transparent;
+            color: var(--clr-text-muted);
+            border: 1px solid var(--clr-border);
+        }
+
+        .ex-download:hover {
+            border-color: var(--clr-accent-4);
+            color: var(--clr-accent-4);
+        }
+
+        /* ===== CREATIVE SHOWCASE GALLERY ===== */
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .showcase-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--clr-border);
+            height: 250px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(78, 62, 55, 0.01);
+            background: var(--clr-bg-alt);
+        }
+
+        .showcase-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .showcase-card:hover .showcase-img {
+            transform: scale(1.1);
+        }
+
+        .showcase-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 40%, rgba(45, 30, 23, 0.95));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+        }
+
+        .showcase-card:hover .showcase-overlay {
+            opacity: 1;
+        }
+
+        .showcase-overlay h4 {
+            color: var(--clr-white);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            margin-bottom: 0.3rem;
+            transform: translateY(15px);
+            transition: transform 0.4s ease 0.1s;
+        }
+
+        .showcase-overlay p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8rem;
+            transform: translateY(15px);
+            transition: transform 0.4s ease 0.2s;
+        }
+
+        .showcase-card:hover h4, 
+        .showcase-card:hover p {
+            transform: translateY(0);
+        }
+
+        /* ===== CONCLUSION & STATS ===== */
+        .conclusion-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .conclusion-quote {
+            margin-top: 2.5rem;
+            padding: 2rem;
+            border-left: 3px solid var(--clr-accent-1);
+            font-style: italic;
+            color: var(--clr-text-muted);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            background: rgba(176, 106, 87, 0.02);
+            border-radius: 0 16px 16px 0;
+        }
+
+        .conclusion-quote strong {
+            color: var(--clr-heading);
+            font-style: normal;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--clr-accent-1), var(--clr-accent-4));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 0.6rem;
+        }
+
+        .stat-label {
+            color: var(--clr-text-muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            position: relative;
+            z-index: 1;
+            padding: 5rem 0 3rem;
+            border-top: 1px solid var(--clr-border);
+            background: var(--clr-bg-alt);
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-style: italic;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--clr-accent-1), var(--clr-accent-4));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .footer-text {
+            color: var(--clr-text-muted);
+            font-size: 0.88rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== MODAL WINDOW ===== */
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(45, 30, 23, 0.6);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            padding: 1.5rem;
+        }
+
+        .modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-container {
+            background: var(--clr-bg);
+            border: 1px solid var(--clr-border);
+            width: 100%;
+            max-width: 900px;
+            max-height: 85vh;
+            border-radius: 28px;
+            box-shadow: 0 25px 60px rgba(45, 30, 23, 0.15);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transform: translateY(30px);
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .modal.active .modal-container {
+            transform: translateY(0);
+        }
+
+        .modal-header {
+            padding: 1.8rem 2.5rem;
+            border-bottom: 1px solid var(--clr-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--clr-bg-alt);
+        }
+
+        .modal-title-wrap h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--clr-heading);
+            margin-bottom: 0.2rem;
+        }
+
+        .modal-subtitle {
+            font-size: 0.8rem;
+            color: var(--clr-text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            color: var(--clr-text-muted);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .modal-close:hover {
+            background: rgba(176, 106, 87, 0.08);
+            color: var(--clr-accent-1);
+        }
+
+        .modal-body {
+            padding: 2.5rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        /* Styles for document content inside modal */
+        .doc-content-wrapper {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            color: var(--clr-text);
+            line-height: 1.8;
+        }
+
+        .doc-h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--clr-heading);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--clr-border);
+        }
+
+        .doc-h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--clr-heading);
+            margin-top: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .doc-h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--clr-heading);
+            margin-top: 1.5rem;
+            margin-bottom: 0.6rem;
+            font-weight: 700;
+        }
+
+        .doc-p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .doc-li {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            list-style-type: square;
+        }
+
+        .doc-link {
+            color: var(--clr-accent-1);
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        .doc-table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            margin: 1.8rem 0;
+            border-radius: 12px;
+            border: 1px solid var(--clr-border);
+        }
+
+        .doc-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .doc-table td {
+            border: 1px solid var(--clr-border);
+            padding: 0.9rem 1.2rem;
+            text-align: left;
+        }
+
+        .doc-table tr:nth-child(even) {
+            background-color: var(--clr-bg-alt);
+        }
+
+        .doc-table tr:first-child {
+            background-color: rgba(176, 106, 87, 0.08);
+            font-weight: bold;
+            color: var(--clr-heading);
+        }
+
+        .doc-image-container {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1rem;
+            border: 1px solid var(--clr-border);
+            background: var(--clr-bg-alt);
+            border-radius: 16px;
+        }
+
+        .doc-image {
+            max-width: 100%;
+            max-height: 450px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+        }
+
+        .doc-image-caption {
+            margin-top: 0.8rem;
+            font-size: 0.82rem;
+            color: var(--clr-text-muted);
+            font-style: italic;
+        }
+
+        /* ===== LIGHTBOX IMAGE PREVIEW ===== */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(45, 30, 23, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            transform: scale(0.95);
+            transition: transform 0.4s;
+        }
+
+        .lightbox.active img {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 2.5rem;
+            right: 2.5rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--clr-accent-1), var(--clr-accent-4));
+            color: var(--clr-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            text-decoration: none;
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(20px);
+            transition: all 0.35s ease;
+            box-shadow: 0 5px 20px rgba(176, 106, 87, 0.3);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(176, 106, 87, 0.4);
+        }
+
+        /* ===== SCROLL PROGRESS BAR ===== */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--clr-accent-1), var(--clr-accent-3), var(--clr-accent-4));
+            z-index: 10000;
+            width: 0%;
+        }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.15s; }
+        .reveal-delay-2 { transition-delay: 0.3s; }
+        .reveal-delay-3 { transition-delay: 0.45s; }
+
+        /* ===== MOUSE GLOW SPOTLIGHT ===== */
+        .mouse-glow {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            background: radial-gradient(circle, rgba(176, 106, 87, 0.045) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease-out;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .grid-3 { grid-template-columns: repeat(2, 1fr); }
+            .conclusion-grid { grid-template-columns: 1fr; gap: 3rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(252, 250, 246, 0.98);
+                backdrop-filter: blur(20px);
+                padding: 2.5rem 2rem;
+                border-bottom: 1px solid var(--clr-border);
+                gap: 1.5rem;
+                box-shadow: 0 10px 30px rgba(78, 62, 55, 0.05);
+            }
+
+            .nav-toggle { display: block; }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+            }
+
+            .hero-right { order: -1; }
+            .hero-avatar-frame { width: 280px; height: 280px; }
+            .hero-bio { text-align: left; }
+            .hero-buttons { justify-content: center; }
+
+            .profile-card { grid-template-columns: 1fr; text-align: center; gap: 2rem; padding: 2.5rem 1.5rem; }
+            .profile-info-grid { grid-template-columns: 1fr; }
+
+            .grid-3 { grid-template-columns: 1fr; }
+            
+            section { padding: 5rem 0; }
+            .exercise-item { padding: 1.2rem 1.5rem; }
+            .exercise-left { gap: 1rem; }
+            .exercise-actions { flex-direction: column; align-items: stretch; width: 100%; margin-top: 1rem; }
+            .exercise-item { flex-direction: column; align-items: flex-start; }
+            .exercise-btn { width: 100%; justify-content: center; }
+
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons { flex-direction: column; width: 100%; }
+            .btn { width: 100%; justify-content: center; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Mouse Spotlight -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <!-- Particle canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="mainNav">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">Như Quỳnh.</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Trang Chủ</a></li>
+                <li><a href="#about">Giới Thiệu</a></li>
+                <li><a href="#skills">Thế Mạnh</a></li>
+                <li><a href="#exercises">Bài Tập</a></li>
+                <li><a href="#conclusion">Tổng Kết</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu Toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <p class="hero-greeting">👋 Chào bạn, mình là</p>
+                    <h1 class="hero-name">
+                        <span class="gradient-text">Lê Đào Như Quỳnh</span>
+                    </h1>
+                    <p class="hero-role">
+                        <span id="typedText"></span><span class="typing-cursor"></span>
+                    </p>
+                    <p class="hero-bio">
+                        Mình hiện là sinh viên chuyên ngành Marketing và Truyền thông tại Trường Quản trị và Kinh doanh (HSB) - Đại học Quốc gia Hà Nội. Là một người trẻ năng động, mình luôn bị cuốn hút bởi sức mạnh của truyền thông số, khả năng chuyển hóa ý tưởng thành chiến dịch thực tế và việc làm chủ các công nghệ mới. Mình luôn hướng tới việc xây dựng tư duy chiến lược nhạy bén cùng khả năng sáng tạo không giới hạn để tạo ra những giá trị truyền thông tích cực và ý nghĩa.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#exercises" class="btn btn-primary">
+                            <i class="fa-solid fa-book-open"></i> Xem Bài Tập
+                        </a>
+                        <a href="#about" class="btn btn-secondary">
+                            <i class="fa-solid fa-user"></i> Giới Thiệu
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="floating-badge fb-1"><i class="fa-solid fa-bullhorn"></i> <span>Marketing</span></div>
+                    <div class="floating-badge fb-2"><i class="fa-solid fa-wand-magic-sparkles"></i> <span>Creative</span></div>
+                    <div class="floating-badge fb-3"><i class="fa-solid fa-brain"></i> <span>AI Tech</span></div>
+                    <div class="hero-avatar-frame">
+                        <img src="avatar.jpg" alt="Lê Đào Như Quỳnh">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" style="background: rgba(176, 106, 87, 0.015);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><i class="fa-solid fa-id-card"></i> Thông Tin</span>
+                <h2 class="section-title">Giới Thiệu <span class="gradient-text">Bản Thân</span></h2>
+                <p class="section-subtitle">Tóm tắt lý lịch khoa học và thông tin liên hệ chính thức của mình.</p>
+                <div class="divider"></div>
+            </div>
+            <div class="glow-card profile-card reveal">
+                <div class="profile-avatar-wrapper">
+                    <div class="profile-avatar">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                </div>
+                <div class="profile-details">
+                    <h3>Thông tin cá nhân</h3>
+                    <div class="profile-info-grid">
+                        <div class="profile-info-item">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Họ tên: <strong>Lê Đào Như Quỳnh</strong></span>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class="fa-solid fa-id-card"></i>
+                            <span>Mã sinh viên: <strong>25080167</strong></span>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class="fa-solid fa-bullhorn"></i>
+                            <span>Chuyên ngành: <strong>Marketing & Truyền thông</strong></span>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Lớp: <strong>MAC 6A - HSB</strong></span>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class="fa-solid fa-school"></i>
+                            <span>Trường: <strong>Trường Quản trị và Kinh doanh</strong></span>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class="fa-solid fa-university"></i>
+                            <span>Đại học: <strong>ĐHQG Hà Nội (ĐHQGHN)</strong></span>
+                        </div>
+                        <div class="profile-info-item" style="grid-column: span 2;">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Email: <a href="mailto:u25080167@hsb.edu.vn">u25080167@hsb.edu.vn</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><i class="fa-solid fa-star"></i> Thế mạnh</span>
+                <h2 class="section-title">Kỹ Năng Cốt Lõi & <span class="gradient-text">Năng Lực</span></h2>
+                <p class="section-subtitle">Những lĩnh vực chuyên môn và kỹ năng thực hành mà mình tập trung phát triển trong quá trình học tập.</p>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-3">
+                <div class="glow-card reveal reveal-delay-1">
+                    <div class="card-icon-wrap icon-accent-1">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <h3 class="card-title">Sáng tạo nội dung & Copywriting</h3>
+                    <p class="card-text">Có khả năng phát triển ý tưởng truyền thông độc đáo, lập dàn ý và biên soạn bài viết chuyên sâu. Nhạy bén trong việc bắt kịp các xu hướng mạng xã hội để tạo ra các thông điệp truyền thông cuốn hút và tiếp cận độc giả hiệu quả.</p>
+                </div>
+                <div class="glow-card reveal reveal-delay-2">
+                    <div class="card-icon-wrap icon-accent-2">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="card-title">Tư duy thẩm mỹ & Thiết kế số</h3>
+                    <p class="card-text">Yêu thích cái đẹp và chú trọng tính đồng bộ thương hiệu. Thành thạo thiết kế ấn phẩm đồ họa, slide thuyết trình và poster trên nền tảng Canva, tối ưu hóa bố cục thị giác và màu sắc để nâng cao hiệu quả truyền tải thông điệp.</p>
+                </div>
+                <div class="glow-card reveal reveal-delay-3">
+                    <div class="card-icon-wrap icon-accent-4">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="card-title">Làm chủ công nghệ & AI Tools</h3>
+                    <p class="card-text">Khai thác hiệu quả các công cụ AI tạo sinh (ChatGPT, Claude, Gemini, Midjourney) một cách có trách nhiệm để hỗ trợ nghiên cứu thị trường, phân tích dữ liệu, tóm tắt tài liệu học thuật và thúc đẩy tiến độ sáng tạo nội dung số.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXERCISES SECTION ===== -->
+    <section id="exercises" style="background: rgba(176, 106, 87, 0.015);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><i class="fa-solid fa-folder-open"></i> Học Tập</span>
+                <h2 class="section-title">Bài Tập <span class="gradient-text">Học Phần</span></h2>
+                <p class="section-subtitle">Hành trình tích lũy kỹ năng số qua các bài tập thực hành thiết yếu trong khóa học Nhập môn CNTT & Trí tuệ nhân tạo.</p>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="exercise-list">
+                <!-- EXERCISE 1 -->
+                <div class="exercise-item reveal reveal-delay-1" data-index="1">
+                    <div class="exercise-left">
+                        <span class="exercise-num">01</span>
+                        <div class="exercise-meta">
+                            <h4>Bài tập 1 — Tìm hiểu về Kỹ năng số & Hệ điều hành</h4>
+                            <span><i class="fa-solid fa-file-word" style="color: #2b579a;"></i> File Word (.docx) — Nhập môn</span>
+                            <p class="exercise-desc">Thực hành các thao tác quản lý tệp tin và thư mục cơ bản trên Windows, làm chủ phím tắt và các thiết lập không gian làm việc số ban đầu.</p>
+                        </div>
+                    </div>
+                    <div class="exercise-actions">
+                        <button class="exercise-btn ex-read" onclick="openExercise(1, event)"><i class="fa-solid fa-eye"></i> Đọc trực tuyến</button>
+                        <a href="bài tập 1.docx" class="exercise-btn ex-download"><i class="fa-solid fa-download"></i> Tải file .docx</a>
+                    </div>
+                </div>
+
+                <!-- EXERCISE 2 -->
+                <div class="exercise-item reveal reveal-delay-1" data-index="2">
+                    <div class="exercise-left">
+                        <span class="exercise-num">02</span>
+                        <div class="exercise-meta">
+                            <h4>Bài tập 2 — Tìm kiếm & Đánh giá nguồn thông tin học thuật</h4>
+                            <span><i class="fa-solid fa-file-word" style="color: #2b579a;"></i> File Word (.docx) — Nghiên cứu</span>
+                            <p class="exercise-desc">Nghiên cứu chủ đề: "Ảnh hưởng của mạng xã hội đến hành vi tiêu dùng của sinh viên". Thực hành phương pháp tìm kiếm và thẩm định tài liệu uy tín.</p>
+                        </div>
+                    </div>
+                    <div class="exercise-actions">
+                        <button class="exercise-btn ex-read" onclick="openExercise(2, event)"><i class="fa-solid fa-eye"></i> Đọc trực tuyến</button>
+                        <a href="bài tập 2.docx" class="exercise-btn ex-download"><i class="fa-solid fa-download"></i> Tải file .docx</a>
+                    </div>
+                </div>
+
+                <!-- EXERCISE 3 -->
+                <div class="exercise-item reveal reveal-delay-2" data-index="3">
+                    <div class="exercise-left">
+                        <span class="exercise-num">03</span>
+                        <div class="exercise-meta">
+                            <h4>Bài tập 3 — Viết Prompt hiệu quả cho các tác vụ học tập</h4>
+                            <span><i class="fa-solid fa-file-word" style="color: #2b579a;"></i> File Word (.docx) — Sáng tạo & Kỹ năng AI</span>
+                            <p class="exercise-desc">Xây dựng, thử nghiệm và so sánh các phiên bản prompt (cơ bản, chi tiết, nâng cao) cho các tác vụ tóm tắt, giải thích khái niệm phức tạp và hỏi đáp khoa học.</p>
+                        </div>
+                    </div>
+                    <div class="exercise-actions">
+                        <button class="exercise-btn ex-read" onclick="openExercise(3, event)"><i class="fa-solid fa-eye"></i> Đọc trực tuyến</button>
+                        <a href="bài tập 3.docx" class="exercise-btn ex-download"><i class="fa-solid fa-download"></i> Tải file .docx</a>
+                    </div>
+                </div>
+
+                <!-- EXERCISE 4 -->
+                <div class="exercise-item reveal reveal-delay-2" data-index="4">
+                    <div class="exercise-left">
+                        <span class="exercise-num">04</span>
+                        <div class="exercise-meta">
+                            <h4>Bài tập 4 — Công cụ công nghệ trực tuyến & Làm việc nhóm</h4>
+                            <span><i class="fa-solid fa-file-word" style="color: #2b579a;"></i> File Word (.docx) — Quản lý dự án</span>
+                            <p class="exercise-desc">Thiết lập và tối ưu không gian làm việc số cộng tác nhóm. Đúc kết kinh nghiệm sử dụng Google Workspace và quản trị nhóm trao đổi trực tuyến.</p>
+                        </div>
+                    </div>
+                    <div class="exercise-actions">
+                        <button class="exercise-btn ex-read" onclick="openExercise(4, event)"><i class="fa-solid fa-eye"></i> Đọc trực tuyến</button>
+                        <a href="bài tập 4.docx" class="exercise-btn ex-download"><i class="fa-solid fa-download"></i> Tải file .docx</a>
+                    </div>
+                </div>
+
+                <!-- EXERCISE 5 -->
+                <div class="exercise-item reveal reveal-delay-3" data-index="5">
+                    <div class="exercise-left">
+                        <span class="exercise-num">05</span>
+                        <div class="exercise-meta">
+                            <h4>Bài tập 5 — Ứng dụng AI tạo sinh trong sáng tạo nội dung số</h4>
+                            <span><i class="fa-solid fa-file-word" style="color: #2b579a;"></i> File Word (.docx) — Thực hành AI tạo sinh</span>
+                            <p class="exercise-desc">Kết hợp 3 công cụ AI khác nhau (Text AI, Image AI, Design AI) để hỗ trợ quy trình thiết kế slide, lập dàn ý thuyết trình và xây dựng ấn phẩm truyền thông số.</p>
+                        </div>
+                    </div>
+                    <div class="exercise-actions">
+                        <button class="exercise-btn ex-read" onclick="openExercise(5, event)"><i class="fa-solid fa-eye"></i> Đọc trực tuyến</button>
+                        <a href="bài tập 5.docx" class="exercise-btn ex-download"><i class="fa-solid fa-download"></i> Tải file .docx</a>
+                    </div>
+                </div>
+
+                <!-- EXERCISE 6 -->
+                <div class="exercise-item reveal reveal-delay-3" data-index="6">
+                    <div class="exercise-left">
+                        <span class="exercise-num">06</span>
+                        <div class="exercise-meta">
+                            <h4>Bài tập 6 — Sử dụng AI có trách nhiệm trong học tập</h4>
+                            <span><i class="fa-solid fa-file-word" style="color: #2b579a;"></i> File Word (.docx) — Đạo đức & Nguyên tắc</span>
+                            <p class="exercise-desc">Phân tích các chính sách liêm chính học thuật, đạo đức học tập liên quan đến AI và đề ra bộ nguyên tắc cá nhân khi ứng dụng trí tuệ nhân tạo.</p>
+                        </div>
+                    </div>
+                    <div class="exercise-actions">
+                        <button class="exercise-btn ex-read" onclick="openExercise(6, event)"><i class="fa-solid fa-eye"></i> Đọc trực tuyến</button>
+                        <a href="bài tập 6.docx" class="exercise-btn ex-download"><i class="fa-solid fa-download"></i> Tải file .docx</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONCLUSION SECTION ===== -->
+    <section id="conclusion" style="background: rgba(176, 106, 87, 0.015);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><i class="fa-solid fa-flag-checkered"></i> Nhìn Lại</span>
+                <h2 class="section-title">Tổng Kết & <span class="gradient-text">Đánh Giá</span></h2>
+                <p class="section-subtitle">Đánh giá chung về hành trình nâng cao kỹ năng số và định hướng nghề nghiệp tiếp theo.</p>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="conclusion-grid">
+                <div class="glow-card reveal reveal-delay-1">
+                    <div class="card-icon-wrap icon-accent-1">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Kết quả đạt được qua học phần</h3>
+                    <p class="card-text" style="margin-bottom: 1.2rem;">
+                        Trải qua các bài tập từ cơ bản đến phức tạp trong khóa học Kỹ năng số và Nhập môn CNTT, mình đã tích lũy được nền tảng kỹ năng số thiết thực cho công việc hiện đại. Từ việc tối ưu không gian làm việc số, khai thác tối đa trí tuệ nhân tạo một cách có đạo đức, đến thiết kế đồ họa truyền thông và phân tích báo cáo.
+                    </p>
+                    <p class="card-text">
+                        Đối với một sinh viên Marketing và Truyền thông tại HSB, đây là bàn đạp vững chắc giúp mình tự tin ứng dụng công nghệ để giải quyết các bài toán truyền thông, tối ưu hóa quy trình sáng tạo và chuẩn bị cho các dự án thực tiễn tiếp theo trong ngành.
+                    </p>
+                    <div class="conclusion-quote">
+                        <strong>"Công nghệ không thay thế con người, nhưng những người làm chủ công nghệ sẽ dẫn dắt tương lai truyền thông sáng tạo."</strong><br>
+                        — Lê Đào Như Quỳnh
+                    </div>
+                </div>
+
+                <div class="reveal reveal-delay-2">
+                    <div class="stats-grid">
+                        <div class="glow-card stat-card">
+                            <div class="stat-number" data-target="6">0</div>
+                            <div class="stat-label">Bài tập kỹ năng</div>
+                        </div>
+                        <div class="glow-card stat-card">
+                            <div class="stat-number" data-target="57">0</div>
+                            <div class="stat-label">Hình ảnh & biểu đồ</div>
+                        </div>
+                        <div class="glow-card stat-card">
+                            <div class="stat-number" data-target="4">0</div>
+                            <div class="stat-label">Kỹ năng cốt lõi</div>
+                        </div>
+                        <div class="glow-card stat-card">
+                            <div class="stat-number" data-target="100">0</div>
+                            <div class="stat-label">% Nỗ lực và đam mê</div>
+                        </div>
+                    </div>
+
+                    <div class="glow-card" style="margin-top: 1.5rem;">
+                        <div class="card-icon-wrap icon-accent-4">
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+                        <h3 class="card-title">Mục tiêu phát triển sắp tới</h3>
+                        <p class="card-text">
+                            Tiếp tục trau dồi các kiến thức nâng cao về Digital Marketing, làm chủ SEO, chạy quảng cáo và tối ưu hóa chuyển đổi số, đồng thời tích cực tham gia xây dựng kế hoạch truyền thông cho các tổ chức để thực chiến hóa kỹ năng.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">Như Quỳnh.</div>
+            <p class="footer-text">© 2026 Lê Đào Như Quỳnh — Chuyên ngành Marketing & Truyền thông</p>
+            <p class="footer-text">Trường Quản trị và Kinh doanh (HSB) — Đại học Quốc gia Hà Nội</p>
+            <p class="footer-text" style="margin-top: 1rem; font-weight: 500;">
+                <i class="fa-solid fa-envelope" style="margin-right: 0.5rem; color: var(--clr-accent-1);"></i> 
+                u25080167@hsb.edu.vn
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- ===== EXERCISES HIDDEN CONTENT (INJECTED BY BUILD SCRIPT) ===== -->
+    <div id="hidden-contents" style="display: none;">
+        <div id="content-bt1">
+            <div class="doc-table-wrapper"><table class="doc-table">
+<tr>
+<td>Họ và tên </td>
+<td>: Lê Đào Như Quỳnh</td>
+</tr>
+<tr>
+<td>Mã sinh viên </td>
+<td>: 25080167 </td>
+</tr>
+<tr>
+<td>Lớp <br/> </td>
+<td>: VNU1001_E252036 </td>
+</tr>
+</table></div>
+<p class="doc-p"><strong>Thực hiện:</strong></p>
+<p class="doc-p">1.<strong> Mở File Explorer:</strong> Nhấn tổ hợp phím Windows + E hoặc nhấp vào biểu tượng thư mục màu vàng trên thanh tác vụ.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image1.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p">2. <strong>Truy cập ổ đĩa/thư mục:</strong> Ở cột bên trái, nhấp vào This PC, sau đó nhấp đúp vào một ổ đĩa không phải ổ hệ thống (ví dụ: ổ D: hoặc E:). Nếu chỉ có ổ C:, hãy vào thư mục Documents.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image2.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p">3. <strong>Tạo thư mục mới:</strong> Nhấp chuột phải vào một khoảng trống -> chọn New -> Folder. Đặt tên thư mục là ThucHanh_hotensinhvien (ví dụ: ThucHanh_NguyenVanA). Nhấn Enter.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image3.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image4.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p">4. <strong>Vào thư mục vừa tạo:</strong> Nhấp đúp vào thư mục ThucHanh_NguyenVanA</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image5.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p">5. <strong>Tạo tệp tin văn bản:</strong> Nhấp chuột phải vào khoảng trống -> New -> Text Document. Đặt tên là GhiChu.txt. Nhấn Enter.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image6.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image7.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p">6. <strong>Đổi tên tệp tin:</strong> Nhấp chuột phải vào tệp GhiChu.txt -> chọn Rename. Đổi tên thành GhiChuQuanTrong.txt. Nhấn Enter.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image8.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image9.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p">7. <strong>Tạo thư mục con:</strong> Trong thư mục ThucHanh_NguyenVanA, nhấp chuột phải -> New -> Folder. Đặt tên là TaiLieu.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image10.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image11.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p">8. <strong>Sao chép tệp tin (Copy & Paste):</strong></p>
+<li class="doc-li">Nhấp chuột phải vào tệp GhiChuQuanTrong.txt -> chọn Copy (hoặc chọn tệp rồi nhấn Ctrl + C).</li>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image12.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<li class="doc-li">Nhấp đúp vào thư mục TaiLieu, nhấp chuột phải vào khoảng trống bên trong -> chọn Paste (hoặc nhấn Ctrl + V). Bây giờ bạn có một bản sao của tệp trong thư mục TaiLieu.</li>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image13.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image14.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p">9. <strong>Di chuyển tệp tin (Cut & Paste):</strong></p>
+<li class="doc-li">Quay lại thư mục ThucHanh_NguyenVanA. Tạo một tệp mới tên là DiChuyen.txt.</li>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image15.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<li class="doc-li">Nhấp chuột phải vào tệp DiChuyen.txt -> chọn Cut (hoặc chọn tệp rồi nhấn Ctrl + X).</li>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image16.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<li class="doc-li">Nhấp đúp vào thư mục TaiLieu, nhấp chuột phải vào khoảng trống -> chọn Paste (hoặc nhấn Ctrl + V). Tệp gốc đã biến mất khỏi vị trí cũ và chỉ còn ở vị trí mới.</li>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image17.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image18.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p">10. <strong>Xóa tệp tin:</strong> Trong thư mục TaiLieu, nhấp chuột phải vào tệp GhiChuQuanTrong.txt -> chọn Delete. Tệp sẽ được chuyển vào Thùng rác (Recycle Bin).</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image19.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p">11<strong>. Xóa vĩnh viễn:</strong> Chọn tệp DiChuyen.txt, nhấn giữ phím Shift và nhấn phím Delete. Một cảnh báo sẽ hiện ra. Nếu đồng ý, tệp sẽ bị xóa vĩnh viễn mà không qua Thùng rác.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image20.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image21.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p">12<strong>. Khôi phục từ Thùng rác (Tùy chọn):</strong> Tìm biểu tượng Recycle Bin trên màn hình nền, nhấp đúp để mở. Tìm tệp GhiChuQuanTrong.txt đã xóa, nhấp chuột phải vào nó và chọn Restore. Tệp sẽ quay trở lại vị trí ban đầu.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image22.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image23.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt1_extracted/media/image24.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+        </div>
+        <div id="content-bt2">
+            <div class="doc-table-wrapper"><table class="doc-table">
+<tr>
+<td>Họ và tên </td>
+<td>: Lê Đào Như Quỳnh</td>
+</tr>
+<tr>
+<td>Mã sinh viên </td>
+<td>: 25080167 </td>
+</tr>
+<tr>
+<td>Lớp <br/> </td>
+<td>: VNU1001_E252036 </td>
+</tr>
+</table></div>
+<p class="doc-p"><strong>BÁO CÁO </strong></p>
+<p class="doc-p"><em>(tìm kiếm và đánh giá nguồn thông tin học thuật) </em></p>
+<h2 class="doc-h2">I. Giới thiệu</h2>
+<p class="doc-p">Trong bối cảnh thông tin trên Internet ngày càng đa dạng, việc tìm kiếm và đánh giá nguồn thông tin đáng tin cậy là một kỹ năng quan trọng đối với sinh viên, đặc biệt là sinh viên ngành Marketing và Truyền thông. Việc sử dụng các nguồn thông tin không chính xác có thể dẫn đến sai lệch trong nhận thức và ảnh hưởng đến chất lượng học tập cũng như nghiên cứu.</p>
+<p class="doc-p">Bài báo cáo này tập trung vào việc tìm kiếm, thu thập và đánh giá các nguồn tài liệu liên quan đến chủ đề: <strong>“Ảnh hưởng của mạng xã hội đến hành vi tiêu dùng của sinh viên”</strong>. Đây là một chủ đề phù hợp với ngành học và có tính thực tiễn cao trong bối cảnh hiện nay.</p>
+<h2 class="doc-h2">II. Phương pháp tìm kiếm thông tin</h2>
+<p class="doc-p">Để thu thập tài liệu, em đã sử dụng nhiều nguồn khác nhau nhằm đảm bảo tính đa dạng và độ tin cậy:</p>
+<p class="doc-p">Cơ sở dữ liệu học thuật như Google Scholar</p>
+<p class="doc-p">Các bài báo khoa học từ tạp chí quốc tế</p>
+<p class="doc-p">Sách chuyên khảo liên quan đến marketing và hành vi người tiêu dùng</p>
+<p class="doc-p">Các nguồn mở trên Internet như báo chí chính thống, ví dụ Báo Quân đội nhân dân</p>
+<p class="doc-p">Tổng cộng, em đã thu thập hơn 10 tài liệu, trong đó có ít nhất 5 bài báo khoa học.</p>
+<p class="doc-p"><strong>III. Tổng hợp và đánh giá nguồn thông tin </strong></p>
+<h2 class="doc-h2">1. Tiêu chí đánh giá</h2>
+<p class="doc-p">Các nguồn thông tin được đánh giá dựa trên các tiêu chí sau:</p>
+<p class="doc-p">Tác giả (trình độ chuyên môn)</p>
+<p class="doc-p">Cơ quan xuất bản</p>
+<p class="doc-p">Phương pháp nghiên cứu</p>
+<p class="doc-p">Số lượng trích dẫn</p>
+<p class="doc-p">Tính cập nhật</p>
+<h2 class="doc-h2">2. Bảng tổng hợp đánh giá</h2>
+<div class="doc-table-wrapper"><table class="doc-table">
+<tr>
+<td>STT </td>
+<td>Nguồn </td>
+<td>Loại nguồn </td>
+<td>Tác giả & Cơ quan </td>
+<td>Phương pháp nghiên cứu </td>
+<td>Độ tin cậy </td>
+<td>Nhận xét </td>
+</tr>
+<tr>
+<td>1 </td>
+<td>Bài báo “Social <br/>Media and <br/>Consumer <br/>Behavior” (từ <br/>Google Scholar) </td>
+<td>Bài báo khoa học </td>
+<td>Tác giả có học hàm, <br/>đăng trên tạp chí quốc tế </td>
+<td>Có khảo sát và phân tích dữ liệu </td>
+<td>Rất cao </td>
+<td>Nguồn học thuật chuẩn, phù hợp nghiên cứu </td>
+</tr>
+<tr>
+<td>2 </td>
+<td>Journal of <br/>Marketing <br/>Research </td>
+<td>Tạp chí khoa học </td>
+<td>Tạp chí uy tín quốc tế </td>
+<td>Có phản biện khoa học </td>
+<td>Rất cao </td>
+<td>Độ tin cậy cao, nên ưu tiên sử dụng </td>
+</tr>
+<tr>
+<td>3 </td>
+<td>Sách “Consumer <br/>Behavior” </td>
+<td>Sách chuyên khảo </td>
+<td>Tác giả chuyên gia marketing </td>
+<td>Tổng hợp lý thuyết </td>
+<td>Cao </td>
+<td>Phù hợp làm nền tảng lý thuyết </td>
+</tr>
+<tr>
+<td>4 </td>
+<td>Bài báo về marketing trên <br/>Google Scholar </td>
+<td>Bài báo khoa học </td>
+<td>Nhiều tác giả khác nhau </td>
+<td>Có nghiên cứu định lượng </td>
+<td>Cao </td>
+<td>Cần chọn lọc bài uy tín </td>
+</tr>
+<tr>
+<td>5 </td>
+<td>Báo Quân đội nhân dân </td>
+<td>Báo chí </td>
+<td>Cơ quan nhà nước </td>
+<td>Không có nghiên cứu </td>
+<td>Trung bình– cao </td>
+<td>Tin cậy nhưng chỉ mang tính tham khảo </td>
+</tr>
+<tr>
+<td>6 </td>
+<td>Website marketing <br/>(blog) </td>
+<td>Nguồn mở </td>
+<td>Không rõ chuyên môn </td>
+<td>Không rõ </td>
+<td>Trung bình </td>
+<td>Cần kiểm chứng trước khi dùng </td>
+</tr>
+<tr>
+<td>7 </td>
+<td>Bài nghiên cứu về digital marketing </td>
+<td>Bài báo khoa học </td>
+<td>Tác giả học thuật </td>
+<td>Có phân <br/>tích dữ liệu </td>
+<td>Cao </td>
+<td>Phù hợp đề tài </td>
+</tr>
+<tr>
+<td>8 </td>
+<td>Tạp chí kinh tế quốc tế </td>
+<td>Tạp chí khoa học </td>
+<td>Uy tín </td>
+<td>Có phản biện </td>
+<td>Rất cao </td>
+<td>Nguồn rất đáng tin cậy </td>
+</tr>
+<tr>
+<td>9 </td>
+<td>Ebook marketing </td>
+<td>Sách </td>
+<td>Không rõ nhà xuất bản </td>
+<td>Tổng hợp </td>
+<td>Trung bình </td>
+<td>Không nên dùng làm nguồn chính </td>
+</tr>
+<tr>
+<td>10 </td>
+<td>Báo điện tử khác </td>
+<td>Báo chí </td>
+<td>Tòa soạn </td>
+<td>Không có </td>
+<td>Trung bình </td>
+<td>Chỉ dùng để cập nhật thông tin </td>
+</tr>
+</table></div>
+<h2 class="doc-h2">IV. Phân tích và đánh giá</h2>
+<p class="doc-p">Nhìn chung, các bài báo khoa học từ Google Scholar có độ tin cậy cao nhất do có phương pháp nghiên cứu rõ ràng và được trích dẫn nhiều. Các tạp chí khoa học quốc tế cũng đảm bảo chất lượng do có quy trình phản biện nghiêm ngặt.</p>
+<p class="doc-p">Sách chuyên khảo đóng vai trò cung cấp nền tảng lý thuyết, giúp hiểu sâu vấn đề. Trong khi đó, các nguồn báo chí như Báo Quân đội nhân dân có ưu điểm về tính cập nhật nhưng hạn chế về chiều sâu học thuật.</p>
+<p class="doc-p">Các nguồn mở trên Internet có tính đa dạng nhưng độ tin cậy không đồng đều, do đó cần kiểm chứng kỹ trước khi sử dụng.</p>
+<h2 class="doc-h2">V. Kết luận</h2>
+<p class="doc-p">Qua quá trình thực hiện bài tập, em nhận thấy việc tìm kiếm và đánh giá nguồn thông tin là một kỹ năng quan trọng đối với sinh viên. Việc kết hợp nhiều nguồn khác nhau giúp đảm bảo tính toàn diện và chính xác của thông tin.</p>
+<p class="doc-p">Đối với nghiên cứu học thuật, nên ưu tiên các nguồn như bài báo khoa học, tạp chí uy tín và sách chuyên khảo. Các nguồn khác như báo chí và website chỉ nên dùng để tham khảo bổ sung.</p>
+<p class="doc-p">Trong tương lai, em sẽ tiếp tục rèn luyện kỹ năng này để phục vụ tốt hơn cho việc học tập và nghiên cứu trong ngành Marketing và Truyền thông.</p>
+<h2 class="doc-h2">VI. Tài liệu tham khảo (Harvard – mẫu)</h2>
+<p class="doc-p">Kotler, P. (2017). <em>Marketing Management</em>. Pearson.</p>
+<p class="doc-p">Solomon, M. (2018). <em>Consumer Behavior</em>. Pearson.</p>
+<p class="doc-p">Smith, A. (2020). Social media and consumer behavior. <em>Journal of Marketing Research</em>.</p>
+<p class="doc-p">Báo Quân đội nhân dân, bài báo “Giá vàng hôm nay 20/3/2025”</p>
+<p class="doc-p">Các tài liệu từ Google Scholar.</p>
+        </div>
+        <div id="content-bt3">
+            <p class="doc-p"><strong>VIẾT PROMPT HIỆU QUẢ CHO CÁC TÁC VỤ HỌC TẬP</strong></p>
+<p class="doc-p">Họ và tên sinh viên: Lê Đào Như Quỳnh</p>
+<p class="doc-p">Mã sinh viên: 25080167</p>
+<p class="doc-p"><strong>Mở đầu: </strong></p>
+<p class="doc-p">Trong thời đại công nghệ số hiện nay, mô hình ngôn ngữ lớn (Large Language Models – LLMs) như Chat GPT đã trở thành công cụ hỗ trợ đắc lực trong nhiều lĩnh vực, đặc biệt là học tâp và nghiên cứu. Việc viết prompt hiệu quả giúp khai thác tối đa khả năng của các mô hình này, từ đó nâng cao chất lượng và hiệu quả học tập. Báo cáo này tập trung phân tích cách xây dựng prompt phù hợp cho các tác vụ học tập phổ biến, thử nghiệm và so sánh kết quả để rút ra các nguyên tắc viết prompt hiệu quả.</p>
+<p class="doc-p"><strong>I. Lựa chọn và phân tích tác vụ học tập.</strong></p>
+<p class="doc-p">Để khai thác tối đa khả năng của mô hình ngôn ngữ lớn trong học tập, tôi đã lựa chọn 3 tác vụ phổ biến và có tính ứng dụng cao:</p>
+<p class="doc-p"><strong>1. Tóm tắt một bài đọc/tài liệu học thuật</strong></p>
+<p class="doc-p"><strong>- Mục tiêu</strong>: Rút gọn nội dung, giữ lại các ý chính để phục vụ ôn tập hoặc nghiên cứu.</p>
+<p class="doc-p"><strong>- Hình thức thực hiện</strong>: Cung cấp văn bản đầu vào, yêu cầu mô hình tạo bản tóm tắt súc tích.</p>
+<p class="doc-p"><strong>2</strong>. <strong>Giải thích một khái niệm phức tạp</strong></p>
+<p class="doc-p"><strong>- Mục tiêu</strong>: Làm rõ nội dung khó hiểu, giúp người học tiếp cận dễ dàng hơn.</p>
+<p class="doc-p"><strong>- Hình thức thực hiện</strong>: Đưa ra khái niệm, yêu cầu mô hình giải thích theo nhiều cấp độ (cơ bản đến nâng cao) hiểu và áp dụng kiến thức.</p>
+<p class="doc-p"><strong>- Hình thức thực hiện</strong>: Đặt câu hỏi cụ thể, yêu cầu mô hình trả lời chính xác và có lập luận.</p>
+<p class="doc-p">II. Xây dựng các phiên bản prompt.</p>
+<p class="doc-p"><strong>Tóm tắt tài liệu học thuật.</strong></p>
+<p class="doc-p"><strong>Prompt cơ bản: </strong>“Tóm tắt văn bản sau”.</p>
+<p class="doc-p">Ví dụ: “Tóm tắt bài báo về bảo vệ môi trường”.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt3_extracted/media/image1.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt3_extracted/media/image2.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>- Prompt chi tiết: </strong>"Hãy tóm tắt văn bản sau, giữ lại các luận điểm chính, loại bỏ chi tiết phụ."</p>
+<p class="doc-p">Ví dụ: "Tóm tắt bài báo về bảo vệ môi trường, tập trung vào nguyên nhân và hậu quả chính."</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt3_extracted/media/image3.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>- Prompt nâng cao: </strong>"Bạn là một trợ lý học thuật. Hãy tóm tắt văn bản sau theo cấu trúc: 1) Chủ đề chính, 2) Các luận điểm chính, 3) Kết luận."</p>
+<p class="doc-p">Ví dụ: "Bạn là trợ lý học thuật, tóm tắt bài báo về bảo vệ môi trường theo cấu trúc: chủ đề, luận điểm, kết luận."</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt3_extracted/media/image4.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt3_extracted/media/image5.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>Giải thích khái niệm phức tạp</strong></p>
+<p class="doc-p"><strong>Prompt cơ bản: </strong>“giải thích định luật bảo toàn năng lượng”.</p>
+<p class="doc-p">Ví dụ: “Định luật bảo toàn năng lượng là gì?”</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt3_extracted/media/image6.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>Prompt chi tiết:</strong> “giải thích định luật bảo toàn năng lượng trong vật lý, dành cho sinh viên năm nhất’.</p>
+<p class="doc-p">Ví dụ: “Hãy giải thích định luật bảo toàn năng lượng cho sinh viên năm nhất”.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt3_extracted/media/image7.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>Prompt nâng cao:</strong> “Bạn là giảng viên vật lý. Hãy giải thích định luật bảo toàn năng lượng bằng cách sử dụng ứng dụng thực tế, sau đó liên hệ với các ứng dụng trong đời sống và kĩ thuật”.</p>
+<p class="doc-p">Ví dụ: “giải thích định luật bảo toàn năng lượng với ví dụ về con lắc đơn và ứng dụng trong kĩ thuật năng lượng tái tạo”.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt3_extracted/media/image8.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div>  <div class="doc-image-container"><img class="doc-image" src="bt3_extracted/media/image9.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt3_extracted/media/image10.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div> <div class="doc-image-container"><img class="doc-image" src="bt3_extracted/media/image11.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>Trả lời hỏi đáp.</strong></p>
+<p class="doc-p"><strong>- Prompt cơ bản: </strong>"Trả lời câu hỏi: Tình cảm gia đình là gì?"</p>
+<p class="doc-p">Ví dụ: "Tình cảm gia đình là sự gắn bó và yêu thương giữa các thành viên trong gia đình."</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt3_extracted/media/image12.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>- Prompt chi tiết: </strong>"Giải thích ý nghĩa của tình cảm gia đình trong cuộc sống con người."</p>
+<p class="doc-p">Ví dụ: "Tình cảm gia đình giúp tạo nên sự ổn định tinh thần, hỗ trợ phát triển cá nhân và xây dựng mối  quan hệ xã hội bền vững."</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt3_extracted/media/image13.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>- Prompt nâng cao: </strong>"Bạn là một nhà tâm lý học. Hãy phân tích sâu sắc về vai trò và ảnh hưởng của tình cảm gia đình đối với sự phát triển cá nhân và xã hội."</p>
+<p class="doc-p">Ví dụ: "Tình cảm gia đình đóng vai trò then chốt trong việc hình thành nhân cách, ảnh hưởng đến sức khỏe tâm thần và khả năng thích nghi xã hội của mỗi cá nhân. Nó còn góp phần duy trì các giá trị văn hóa và sự phát triển bền vững của xã hội”.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt3_extracted/media/image14.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>III. Thử nghiệm và so sánh kết quả.</strong></p>
+<p class="doc-p">Tôi đã sử dụng<strong> Chat GPT</strong> để thử nghiệm các prompt trên. Dưới đây là bảng so sánh kết quả:</p>
+<div class="doc-table-wrapper"><table class="doc-table">
+<tr>
+<td>Tác vụ</td>
+<td>Phiên bản</td>
+<td>Độ dài đầu ra</td>
+<td>Mức độ chính xác</td>
+<td>Tính logic</td>
+<td>Tính sáng tạo</td>
+</tr>
+<tr>
+<td>Tóm tắt</td>
+<td>Cơ bản</td>
+<td>Ngắn</td>
+<td>Trung bình</td>
+<td>Thấp</td>
+<td>Thấp</td>
+</tr>
+<tr>
+<td>Tóm tắt</td>
+<td>Chi tiết</td>
+<td>Vừa</td>
+<td>Tốt</td>
+<td>Tốt</td>
+<td>Trung bình</td>
+</tr>
+<tr>
+<td>Tóm tắt</td>
+<td>Nâng cao</td>
+<td>Dài </td>
+<td>Rất tốt</td>
+<td>Rất tốt</td>
+<td>Cao </td>
+</tr>
+<tr>
+<td>Giải thích </td>
+<td>Cơ bản</td>
+<td>Ngắn</td>
+<td>Trung bình</td>
+<td>Thấp</td>
+<td>Thấp</td>
+</tr>
+<tr>
+<td>Giải thích</td>
+<td>Chi tiết</td>
+<td>Vừa</td>
+<td>Tốt</td>
+<td>Tốt</td>
+<td>Trung bình</td>
+</tr>
+<tr>
+<td>Giải thích</td>
+<td>Nâng cao</td>
+<td>Dài </td>
+<td>Rất tốt</td>
+<td>Rất tốt</td>
+<td>Cao </td>
+</tr>
+<tr>
+<td>Hỏi đáp</td>
+<td>Cơ bản</td>
+<td>Ngắn</td>
+<td>Trung bình</td>
+<td>Thấp</td>
+<td>Thấp</td>
+</tr>
+<tr>
+<td>Hỏi đáp</td>
+<td>Chi tiết</td>
+<td>Vừa</td>
+<td>Tốt</td>
+<td>Tốt</td>
+<td>Trung bình</td>
+</tr>
+<tr>
+<td>Hỏi đáp</td>
+<td>Nâng cao</td>
+<td>Dài </td>
+<td>Rất tốt</td>
+<td>Rất tốt</td>
+<td>Cao </td>
+</tr>
+</table></div>
+<p class="doc-p"><strong>IV. Phân tích hiệu quả prompt.</strong></p>
+<p class="doc-p">Qua thử nghiệm, tôi nhận thấy:</p>
+<p class="doc-p">Prompt nâng cao tạo ra kết quả chất lượng hơn nhờ vào việc định hướng vai trò và cấu trúc rõ ràng.</p>
+<p class="doc-p">Việc sử dụng kỹ thuật như role prompting giúp mô hình hiểu ngữ cảnh và mục tiêu tốt hơn.</p>
+<p class="doc-p">Prompt có ví dụ (few-shot) giúp mô hình bắt chước cách trả lời chính xác hơn.</p>
+<p class="doc-p">Prompt càng rõ ràng, kết quả càng logic và dễ hiểu.</p>
+<p class="doc-p"><strong>V. Tổng hợp nguyên tắc và trình bày báo cáo.</strong></p>
+<p class="doc-p"><strong> Nguyên tắc viết prompt hiệu quả:</strong></p>
+<p class="doc-p"><strong>Xác định rõ mục tiêu: </strong>Prompt cần thể hiện rõ yêu cầu đầu ra.</p>
+<p class="doc-p"><strong>Định hướng vai trò: </strong>Sử dụng role prompting để mô hình hiểu vai trò của mình.</p>
+<p class="doc-p"><strong>Cấu trúc rõ ràng:</strong> chia nhỏ yêu cầu theo từng bước hoặc mục.</p>
+<p class="doc-p"><strong>Cung cấp ví dụ: </strong>Nếu có thể, đưa ra ví dụ để mô hình học theo.</p>
+<p class="doc-p"><strong>Ngôn ngữ cụ thể:</strong> Tránh dung từ mơ hồ, nên dung từ ngữ chính xác.</p>
+<p class="doc-p"><strong>VI. Kết luận.</strong></p>
+<p class="doc-p">Việc viết prompt hiệu quả đóng vai trò then chốt trong việc khai thác tối đa tiềm năng của các mô hình ngôn ngữ lớn trong học tập và nghiên cứu. Qua báo cáo này, có thể thấy rằng prompt càng chi tiết, rõ ràng và có định hướng vai trò cụ thể thì kết quả trả về càng chính xác, logic và sáng tạo hơn. Việc áp dụng các nguyên tắc như xác định mục tiêu rõ ràng, cấu trúc mạch lạc, cung cấp ví dụ minh họa và sử dụng ngôn ngữ cụ thể giúp nâng cao hiệu quả giao tiếp với mô hình.</p>
+<p class="doc-p">Ngoài ra, thử nghiệm cho thấy prompt nâng cao không chỉ cải thiện chất lượng nội dung mà còn giúp người học phát triển tư duy phản biện và khả năng phân tích sâu sắc hơn. Do đó, việc đầu tư thời gian và công sức để xây dựng prompt phù hợp là rất cần thiết cho các tác vụ học tập hiện đại.</p>
+<p class="doc-p">Hy vọng báo cáo này sẽ là tài liệu tham khảo hữu ích cho việc ứng dụng AI trong học tập, đồng thời góp phần nâng cao kỹ năng viết prompt cho người học và nhà nghiên cứu.</p>
+        </div>
+        <div id="content-bt4">
+            <p class="doc-p"><strong>BÁO CÁO THỰC HÀNH: ỨNG DỤNG CÔNG CỤ CÔNG NGHỆ TRỰC TUYẾN TRONG QUẢN LÝ DỰ ÁN VÀ CỘNG TÁC NHÓM HIỆU QUẢ</strong></p>
+<p class="doc-p"><strong>Người thực hiện:</strong> Lê Đào Như Quỳnh</p>
+<p class="doc-p"><strong>Mã số sinh viên:</strong> 25080167</p>
+<p class="doc-p"><strong>Chuyên ngành:</strong> Marketing & Truyền thông</p>
+<p class="doc-p"><strong>Trường:</strong> Trường Quản trị và Kinh Doanh - ĐHQGHN</p>
+<p class="doc-p"><strong>PHẦN I. THIẾT LẬP VÀ TỐI ƯU HÓA KHÔNG GIAN LÀM VIỆC SỐ</strong></p>
+<p class="doc-p">Trong quá trình thực hiện dự án nhóm với chủ đề <strong>"AI và Kỷ nguyên học ngoại ngữ"</strong>, em tham gia xây dựng và sử dụng hệ sinh thái làm việc trực tuyến gồm Zalo, Google Docs và Google Drive nhằm hỗ trợ trao đổi thông tin, biên soạn nội dung và lưu trữ dữ liệu dự án.</p>
+<p class="doc-p"><strong>1. Công cụ giao tiếp nhóm: Zalo</strong></p>
+<p class="doc-p"><strong>Quá trình sử dụng</strong></p>
+<p class="doc-p">Nhóm 31 AI gồm 5 thành viên sử dụng Zalo làm nền tảng giao tiếp chính xuyên suốt quá trình thực hiện dự án.</p>
+<p class="doc-p">Thông qua nhóm chat, trưởng nhóm đã phân công nhiệm vụ cụ thể cho từng thành viên. Theo nội dung phân công được ghim trong nhóm, em được giao phụ trách các nội dung liên quan đến phần giới thiệu chủ đề và phần kết luận của dự án.</p>
+<p class="doc-p">Ngoài việc tiếp nhận nhiệm vụ, em còn thường xuyên theo dõi các thông báo của trưởng nhóm, trao đổi tiến độ thực hiện công việc và phản hồi các góp ý từ các thành viên khác.</p>
+<p class="doc-p"><strong>Hiệu quả đạt được</strong></p>
+<p class="doc-p">Mọi thông tin được cập nhật tập trung tại một nơi.</p>
+<p class="doc-p">Giảm tình trạng bỏ sót nhiệm vụ.</p>
+<p class="doc-p">Dễ dàng theo dõi các mốc thời gian hoàn thành công việc.</p>
+<p class="doc-p">Thuận tiện khi chia sẻ liên kết Google Docs và Google Drive.</p>
+<p class="doc-p"><strong>Minh chứng:</strong> Ảnh chụp nhóm Zalo "Nhóm 31 AI" thể hiện nội dung phân công công việc và trao đổi của nhóm. <div class="doc-image-container"><img class="doc-image" src="bt4_extracted/media/image1.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>2. Công cụ soạn thảo cộng tác: Google Docs</strong></p>
+<p class="doc-p"><strong>Quá trình sử dụng</strong></p>
+<p class="doc-p">Google Docs được sử dụng để xây dựng hồ sơ làm việc nhóm và kịch bản video.</p>
+<p class="doc-p">Trong quá trình thực hiện dự án, em trực tiếp tham gia đóng góp nội dung vào tài liệu chung. Các thành viên cùng chỉnh sửa trên một tài liệu duy nhất nên mọi thay đổi đều được đồng bộ theo thời gian thực.</p>
+<p class="doc-p">Thông qua tính năng chỉnh sửa trực tuyến, em có thể bổ sung nội dung, chỉnh sửa lỗi trình bày và theo dõi các phần việc của các thành viên khác mà không cần gửi nhiều phiên bản tài liệu khác nhau.</p>
+<p class="doc-p"><strong>Tối ưu hóa quá trình làm việc</strong></p>
+<p class="doc-p">Để thuận tiện cho việc cộng tác, tài liệu được chia thành nhiều phần rõ ràng:</p>
+<p class="doc-p">Thông tin nhóm.</p>
+<p class="doc-p">Kịch bản video.</p>
+<p class="doc-p">Nội dung thuyết trình.</p>
+<p class="doc-p">Hồ sơ minh chứng.</p>
+<p class="doc-p">Mỗi thành viên phụ trách một phần riêng nhưng vẫn có thể theo dõi toàn bộ nội dung dự án.</p>
+<p class="doc-p"><strong>Hiệu quả đạt được</strong></p>
+<p class="doc-p">Tiết kiệm thời gian tổng hợp nội dung.</p>
+<p class="doc-p">Hạn chế thất lạc dữ liệu.</p>
+<p class="doc-p">Giảm xung đột phiên bản tài liệu.</p>
+<p class="doc-p">Dễ dàng theo dõi lịch sử chỉnh sửa.</p>
+<p class="doc-p"><strong>Minh chứng:</strong> Ảnh chụp tài liệu Google Docs "Kịch bản phim: AI & Kỷ nguyên học ngoại ngữ" và "Hồ sơ làm việc nhóm".</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt4_extracted/media/image2.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt4_extracted/media/image3.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt4_extracted/media/image4.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt4_extracted/media/image5.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt4_extracted/media/image6.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>3. Công cụ lưu trữ và chia sẻ dữ liệu: Google Drive</strong></p>
+<p class="doc-p"><strong>Quá trình sử dụng</strong></p>
+<p class="doc-p">Google Drive được nhóm sử dụng làm kho lưu trữ tập trung cho toàn bộ tài nguyên của dự án.</p>
+<p class="doc-p">Các tệp được lưu trữ bao gồm:</p>
+<p class="doc-p">Kịch bản video.</p>
+<p class="doc-p">Hồ sơ làm việc nhóm.</p>
+<p class="doc-p">Video hoàn chỉnh.</p>
+<p class="doc-p">Hình ảnh minh chứng.</p>
+<p class="doc-p">Tài liệu tham khảo.</p>
+<p class="doc-p">Các đường liên kết được chia sẻ trực tiếp thông qua nhóm Zalo để tất cả thành viên có thể truy cập nhanh chóng.</p>
+<p class="doc-p"><strong>Tối ưu hóa lưu trữ</strong></p>
+<p class="doc-p">Các tài liệu được đặt tên theo nội dung cụ thể nhằm giúp thành viên dễ nhận biết và tìm kiếm.</p>
+<p class="doc-p">Ví dụ:</p>
+<p class="doc-p">Nhóm 31</p>
+<p class="doc-p">Video dự án</p>
+<p class="doc-p">Hồ sơ làm việc nhóm</p>
+<p class="doc-p"><strong>Hiệu quả đạt được</strong></p>
+<p class="doc-p">Tập trung toàn bộ dữ liệu dự án.</p>
+<p class="doc-p">Dễ dàng chia sẻ cho giảng viên và thành viên nhóm.</p>
+<p class="doc-p">Hạn chế mất dữ liệu do lưu trữ phân tán.</p>
+<p class="doc-p"><strong>Minh chứng:</strong> Ảnh chụp danh sách tài liệu và video trên Google Drive.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt4_extracted/media/image7.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt4_extracted/media/image8.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>PHẦN II. NHẬT KÝ QUẢN LÝ TÁC VỤ VÀ TƯƠNG TÁC CÁ NHÂN</strong></p>
+<p class="doc-p">Trong thời gian thực hiện dự án, em duy trì việc sử dụng các công cụ trực tuyến hằng ngày để hoàn thành nhiệm vụ được giao.</p>
+<p class="doc-p"><strong>1. Tiếp nhận nhiệm vụ</strong></p>
+<p class="doc-p">Ngày 19/04/2026, em tiếp nhận nhiệm vụ từ trưởng nhóm thông qua Zalo.</p>
+<p class="doc-p">Nội dung công việc bao gồm:</p>
+<p class="doc-p">Xây dựng nội dung phần giới thiệu chủ đề.</p>
+<p class="doc-p">Hỗ trợ hoàn thiện nội dung kết luận.</p>
+<p class="doc-p">Phối hợp kiểm tra tính thống nhất của kịch bản.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt4_extracted/media/image1.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>2. Tham gia xây dựng nội dung</strong></p>
+<p class="doc-p">Từ ngày 19/04 đến ngày 22/04, em thường xuyên truy cập Google Docs để:</p>
+<p class="doc-p">Chỉnh sửa nội dung.</p>
+<p class="doc-p">Bổ sung thông tin.</p>
+<p class="doc-p">Kiểm tra lỗi chính tả.</p>
+<p class="doc-p">Điều chỉnh bố cục văn bản.</p>
+<p class="doc-p">Các hoạt động này được thực hiện trực tiếp trên tài liệu cộng tác của nhóm.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt4_extracted/media/image9.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>3. Tương tác với các thành viên</strong></p>
+<p class="doc-p">Trong quá trình thực hiện dự án, em chủ động trao đổi với các thành viên thông qua nhóm Zalo và tiếp nhận nhiệm vụ mà leader giao cho mình</p>
+<p class="doc-p">Thống nhất nội dung.</p>
+<p class="doc-p">Cập nhật tiến độ.</p>
+<p class="doc-p">Hỗ trợ xử lý các vấn đề phát sinh.</p>
+<p class="doc-p">Việc trao đổi thường xuyên giúp các thành viên nắm bắt tình hình công việc và hoàn thành đúng thời hạn được giao.<div class="doc-image-container"><img class="doc-image" src="bt4_extracted/media/image10.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt4_extracted/media/image11.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt4_extracted/media/image12.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>PHẦN III. QUẢN LÝ TÀI NGUYÊN VÀ QUY CHUẨN TỆP TIN</strong></p>
+<p class="doc-p">Để đảm bảo dữ liệu được quản lý khoa học, nhóm áp dụng quy trình lưu trữ thống nhất trên Google Drive.</p>
+<p class="doc-p"><strong>1. Phân loại tài nguyên</strong></p>
+<p class="doc-p">Tài nguyên dự án được chia thành các nhóm:</p>
+<p class="doc-p"><strong>Nhóm tài liệu</strong></p>
+<p class="doc-p">Hồ sơ làm việc nhóm.</p>
+<p class="doc-p">Kịch bản video.</p>
+<p class="doc-p"><strong>Nhóm sản phẩm</strong></p>
+<p class="doc-p">Video hoàn chỉnh.</p>
+<p class="doc-p"><strong>Nhóm minh chứng</strong></p>
+<p class="doc-p">Ảnh chụp màn hình.</p>
+<p class="doc-p">Tài liệu tham khảo.</p>
+<p class="doc-p"><strong>2. Quy chuẩn đặt tên</strong></p>
+<p class="doc-p">Các tệp được đặt tên ngắn gọn, dễ nhận biết và phản ánh đúng nội dung.</p>
+<p class="doc-p">Ví dụ:</p>
+<p class="doc-p">Nhóm 31</p>
+<p class="doc-p">Video</p>
+<p class="doc-p">Hồ sơ làm việc nhóm</p>
+<p class="doc-p"><strong>3. Chia sẻ và phân quyền</strong></p>
+<p class="doc-p">Các tài liệu được chia sẻ thông qua liên kết Google Drive.</p>
+<p class="doc-p">Thành viên nhóm được cấp quyền chỉnh sửa để cộng tác trong quá trình thực hiện dự án, trong khi các liên kết nộp bài được thiết lập phù hợp nhằm hạn chế việc chỉnh sửa ngoài ý muốn sau khi hoàn thành.</p>
+<p class="doc-p"><strong>PHẦN IV. PHÂN TÍCH THÁCH THỨC VÀ GIẢI PHÁP</strong></p>
+<p class="doc-p"><strong>Thách thức 1: Khó sắp xếp thời gian làm việc chung</strong></p>
+<p class="doc-p">Do mỗi thành viên có lịch học và lịch cá nhân khác nhau nên việc họp nhóm trực tiếp gặp nhiều khó khăn.</p>
+<p class="doc-p"><strong>Giải pháp</strong></p>
+<p class="doc-p">Nhóm sử dụng Zalo để trao đổi trực tuyến và cập nhật tiến độ bất cứ lúc nào, giúp giảm sự phụ thuộc vào các buổi họp trực tiếp.</p>
+<p class="doc-p"><strong>Thách thức 2: Nội dung dễ thiếu tính thống nhất</strong></p>
+<p class="doc-p">Khi nhiều thành viên cùng tham gia biên soạn, phong cách trình bày và cách diễn đạt có thể khác nhau.</p>
+<p class="doc-p"><strong>Giải pháp</strong></p>
+<p class="doc-p">Google Docs cho phép tất cả thành viên cùng xem và chỉnh sửa trên một tài liệu duy nhất, giúp rà soát và thống nhất nội dung nhanh chóng.</p>
+<p class="doc-p"><strong>Thách thức 3: Khó quản lý tài liệu khi số lượng tệp tăng lên</strong></p>
+<p class="doc-p">Trong quá trình thực hiện dự án xuất hiện nhiều tài liệu, hình ảnh và video khác nhau.</p>
+<p class="doc-p"><strong>Giải pháp</strong></p>
+<p class="doc-p">Google Drive được sử dụng làm kho lưu trữ tập trung. Các liên kết tài liệu được chia sẻ trong nhóm Zalo giúp việc tìm kiếm và truy cập trở nên nhanh chóng hơn.</p>
+<p class="doc-p">Phiên bản này có độ dài khoảng <strong>1.500–2.000 từ</strong>, đủ tiêu chuẩn một báo cáo thực hành học phần và bám sát các ảnh minh chứng bạn đã cung cấp. Tuy nhiên, để đạt điểm cao hơn, bạn vẫn nên bổ sung thêm <strong>một công cụ quản lý dự án (Trello/ClickUp/Google Sheets quản lý tiến độ)</strong> vì đó là yêu cầu bắt buộc trong đề bài.</p>
+        </div>
+        <div id="content-bt5">
+            <div class="doc-table-wrapper"><table class="doc-table">
+<tr>
+<td>Họ và tên</td>
+<td>: Lê Đào Như Quỳnh</td>
+</tr>
+<tr>
+<td>Mã sinh viên </td>
+<td>: 25080167</td>
+</tr>
+<tr>
+<td>Lớp</td>
+<td>: MAC 6A – HSB</td>
+</tr>
+</table></div>
+<p class="doc-p"><strong>BÀI TẬP BÀI 5: NHẬP MÔN CÔNG NGHỆ THÔNG TIN VÀ TRÍ TUỆ NHÂN TẠO</strong></p>
+<p class="doc-p"><strong>ĐỀ BÀI</strong></p>
+<p class="doc-p"><strong>I. Mục tiêu:</strong> Thành thạo việc sử dụng các công cụ AI tạo sinh để hỗ trợ quá trình sáng tạo nội dung số.</p>
+<p class="doc-p"><strong>II. Yêu cầu:</strong></p>
+<p class="doc-p">1. Chọn một dự án sáng tạo nội dung (bài thuyết trình, bài viết, infographic, hoặc video ngắn).</p>
+<p class="doc-p">2. Sử dụng ít nhất 3 công cụ AI tạo sinh khác nhau để hỗ trợ quá trình sáng tạo:</p>
+<li class="doc-li">Công cụ AI tạo văn bản (ChatGPT, Google Gemini, Claude)</li>
+<li class="doc-li">Công cụ AI tạo hình ảnh (DALL-E, Midjourney, Stable Diffusion)</li>
+<li class="doc-li">Công cụ AI hỗ trợ thiết kế (Canva AI, Adobe Firefly)</li>
+<p class="doc-p">3. Ghi lại chi tiết quá trình sử dụng AI:</p>
+<li class="doc-li">Các prompt đã sử dụng và kết quả nhận được</li>
+<li class="doc-li">Cách bạn chỉnh sửa và tích hợp đầu ra của AI</li>
+<li class="doc-li">So sánh kết quả từ các công cụ AI khác nhau</li>
+<p class="doc-p">4. Hoàn thiện dự án bằng cách kết hợp đầu ra của AI với đóng góp sáng tạo của riêng bạn.</p>
+<p class="doc-p">5. Viết phân tích về vai trò của AI trong quá trình sáng tạo, bao gồm:</p>
+<li class="doc-li">Những phần AI làm tốt và những phần còn hạn chế</li>
+<li class="doc-li">Cách AI thay đổi quy trình sáng tạo của bạn</li>
+<li class="doc-li">Các vấn đề đạo đức cần cân nhắc</li>
+<p class="doc-p"><strong>BÀI LÀM</strong></p>
+<p class="doc-p"><strong>I, Lựa chọn</strong></p>
+<p class="doc-p">Dự án được chọn sáng tạo nội dung: video ngắn giới thiệu về ứng dụng Elsa speak - ứng dụng học tiếng anh ứng dụng AI</p>
+<p class="doc-p">Sử dụng ít nhất 3 công cụ AI tạo sinh khác nhau để hỗ trợ quá trình sáng tạo:</p>
+<li class="doc-li">Công cụ AI tạo văn bản: ChatGPT</li>
+<li class="doc-li">Công cụ AI tạo hình ảnh: DALL-E</li>
+<li class="doc-li">Công cụ AI hỗ trợ thiết kế: Canva AI</li>
+<p class="doc-p"><strong>II, Thực hành các bước</strong></p>
+<p class="doc-p"><strong>1, Lên ý tưởng & nghiên cứu </strong></p>
+<p class="doc-p">Trong thời đại công nghệ số hiện nay, việc học ngoại ngữ đã không còn là một áp lực nặng nề nhờ sự hỗ trợ của các ứng dụng thông minh, trong đó nổi bật nhất là Duolingo. Khác với phương pháp học truyền thống đầy khô khan, Duolingo đã áp dụng thành công mô hình 'trò chơi hóa' , biến mỗi bài học thành một thử thách thú vị với điểm kinh nghiệm, bảng xếp hạng và những phần thưởng hấp dẫn. Với cấu trúc bài học ngắn gọn chỉ từ 5 đến 10 phút, ứng dụng này giúp người học dễ dàng duy trì thói quen học tập hàng ngày. Đặc biệt, tính năng duy trì chuỗi ngày (streak) cùng sự đồng hành của chú cú xanh 'Duo' không chỉ tạo ra động lực tích cực mà còn giúp người dùng cảm thấy hứng thú hơn trên hành trình chinh phục ngôn ngữ mới. Bằng cách cá nhân hóa lộ trình học tập thông qua trí tuệ nhân tạo, Duolingo thực sự đã thay đổi cách chúng ta tiếp cận ngoại ngữ, khiến việc học trở nên gần gũi và hiệu quả hơn bao giờ hết</p>
+<p class="doc-p"><strong>2, Lập kế hoạch</strong></p>
+<p class="doc-p">Sản phẩm hướng tới: Viết kịch bản video ngắn (60-90s) giới thiệu ứng dụng Duolingo. Tập trung làm nổi bật tính năng: học ngoại ngữ như chơi game, các bài học ngắn gọn 5 phút/ngày, và sự thúc đẩy từ hệ thống streak (chuỗi ngày học) để tránh bị 'Duo' nhắc nhở</p>
+<p class="doc-p">Ứng dụng 1 số công nghệ AI tạo sinh để hỗ trợ</p>
+<li class="doc-li">Công cụ AI tạo văn bản: ChatGPT</li>
+<li class="doc-li">Công cụ AI tạo hình ảnh: DALL-E</li>
+<li class="doc-li">Công cụ AI hỗ trợ thiết kế: Canva AI</li>
+<p class="doc-p">Tạo kịch bản :</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image1.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p">Chỉnh sửa prompt :</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image2.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image3.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>3, Sản xuất</strong></p>
+<p class="doc-p">Sau khi chỉnh sửa kịch bản nhiều lần, em đã ưng ý và quyết định sử dụng kịch bản đó</p>
+<p class="doc-p">Bắt tay vào sản xuất, em sẽ đi tạo những hình ảnh để chèn vào video</p>
+<p class="doc-p"><em>Pic 1: Một sinh viên ngồi trước bàn học với cuốn sách tiếng Anh dày cộp, vẻ mặt chán nản.</em></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image4.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><em>Pic 2 : Hiện logo Duolingo và giao diện ứng dụng.</em></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image5.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><em>Pic 3 :Quay màn hình các dạng bài tập đơn giản</em></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image6.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><em>Pic 4: Hiệu ứng XP tăng sau khi hoàn thành bài học.</em></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image7.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><em>Pic 5: Hiện bảng xếp hạng hằng tuần.</em></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image8.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><em>Pic 6 : Đồng hồ hiện 11 giờ 58 phút tối</em></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image9.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><em>Pic 7 : Tổng hợp các cảnh học tập vui vẻ</em>.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image10.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p">Sau đó, em sẽ kết luận lại rằng: việc học tập ứng dụng trí tuệ nhân tạo Doulingo là 1 hình thức mới, đem đến nhiều tiện ích cho người học.</p>
+<p class="doc-p"><strong>4, Biên tập & tinh chỉnh</strong></p>
+<p class="doc-p">Sau bước sản xuất, em đã cắt ghép, chỉnh sửa video các hình ảnh bằng canva, sau đó lồng tiếng, kiểm tra kĩ với các nội dung và hiệu ứng của video.</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image11.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><strong>5, Sản xuất & phân phối</strong></p>
+<p class="doc-p">Sau khi biên tập video bằng canva, em đã xuất video ra với chất lượng hình ảnh đạt chuẩn sau đó update lên các nền tảng mà em mong muốn tiếp cận với người xem</p>
+<p class="doc-p"><strong>6, Đo lường & tối ưu</strong></p>
+<p class="doc-p">Sau khi update lên nền tảng facebook, việc đo lường hiệu quả bằng phản hồi, những con số biết nói đó là lượt thích, lượt xem, lượt chia sẻ. Từ những phản hồi đó thì chúng ta có thể rút ra những bài học, lưu ý cho những nội dung tiếp theo để sản phẩm tới tay người xem được chỉn chu và hoàn thiện nhất có thể</p>
+<p class="doc-p"><strong>III, Nghiệm thu</strong></p>
+<p class="doc-p">1, 1 số hình ảnh em đã tạo được nhờ AI<div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image12.jpeg" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image13.jpeg" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image14.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image15.jpeg" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image16.jpeg" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image17.jpeg" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image18.jpeg" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt5_extracted/media/image19.jpeg" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<h3 class="doc-h3">2. Những phần AI làm tốt và những phần còn hạn chế</h3>
+<div class="doc-table-wrapper"><table class="doc-table">
+<tr>
+<td>Công cụ</td>
+<td>Làm tốt</td>
+<td>Chưa tốt</td>
+</tr>
+<tr>
+<td>ChatGPT</td>
+<td>Hỗ trợ xây dựng kịch bản video rõ ràng, logic và phù hợp với mục tiêu giới thiệu ứng dụng Duolingo. Gợi ý nội dung về các tính năng như bài học 5 phút, hệ thống XP, bảng xếp hạng và chuỗi ngày học. Tiết kiệm đáng kể thời gian lên ý tưởng và viết lời thoại.</td>
+<td>Nội dung đôi khi còn mang tính tổng quát, thiếu ví dụ thực tế. Một số câu văn cần chỉnh sửa để phù hợp với phong cách thuyết minh và đối tượng người xem là sinh viên.</td>
+</tr>
+<tr>
+<td>DALL·E</td>
+<td>Tạo hình ảnh minh họa sinh động về việc học ngoại ngữ, nhân vật sử dụng Duolingo và các yếu tố gamification như điểm XP, huy hiệu và bảng xếp hạng. Hình ảnh có tính sáng tạo và thu hút người xem.</td>
+<td>Một số chi tiết chưa hoàn toàn giống giao diện thực tế của Duolingo. Chữ xuất hiện trong ảnh đôi khi bị lỗi hoặc khó đọc. Cần lựa chọn và chỉnh sửa để đảm bảo tính thống nhất của video.</td>
+</tr>
+<tr>
+<td>Canva AI</td>
+<td>Hỗ trợ thiết kế và dựng video nhanh chóng với nhiều mẫu có sẵn. Dễ dàng kết hợp hình ảnh AI, văn bản, hiệu ứng chuyển cảnh và nhạc nền để tạo video hoàn chỉnh.</td>
+<td>Khả năng tùy chỉnh nâng cao còn hạn chế so với các phần mềm dựng video chuyên nghiệp. Một số mẫu thiết kế có thể bị trùng lặp nếu không chỉnh sửa thêm.</td>
+</tr>
+</table></div>
+<h3 class="doc-h3">3. Cách AI thay đổi quy trình sáng tạo của bạn</h3>
+<p class="doc-p">Việc ứng dụng trí tuệ nhân tạo (AI) đã làm thay đổi đáng kể quy trình sáng tạo nội dung của em trong dự án xây dựng video giới thiệu ứng dụng Duolingo. Trước đây, khi thực hiện một video, em thường phải tự tìm ý tưởng, viết kịch bản, tìm kiếm hình ảnh minh họa và sau đó mới tiến hành thiết kế và dựng video. Quá trình này tốn khá nhiều thời gian, đặc biệt ở giai đoạn lên ý tưởng và tìm tài nguyên phù hợp.</p>
+<p class="doc-p">Khi sử dụng các công cụ AI như ChatGPT, DALL·E và Canva AI, quy trình làm việc trở nên nhanh chóng và hiệu quả hơn. ChatGPT giúp em xây dựng kịch bản video, đề xuất cách giới thiệu các tính năng nổi bật của Duolingo như bài học ngắn 5 phút, hệ thống tích điểm XP, bảng xếp hạng cạnh tranh và chuỗi ngày học liên tục. DALL·E hỗ trợ tạo các hình ảnh minh họa theo đúng ý tưởng mà không cần mất nhiều thời gian tìm kiếm trên Internet. Sau đó, Canva AI giúp em sắp xếp bố cục, thêm hiệu ứng và hoàn thiện video trong thời gian ngắn.</p>
+<p class="doc-p">Nhờ AI, quy trình sáng tạo không còn diễn ra theo từng bước tách biệt mà trở nên linh hoạt hơn. Em có thể liên tục chỉnh sửa nội dung, thử nghiệm hình ảnh và hoàn thiện thiết kế cùng lúc. Điều này giúp tiết kiệm thời gian và tạo điều kiện để thử nghiệm nhiều ý tưởng sáng tạo khác nhau.</p>
+<p class="doc-p">Tuy nhiên, AI không thể thay thế hoàn toàn vai trò của người sáng tạo. Nội dung và hình ảnh do AI tạo ra đôi khi chưa thực sự phù hợp với mục tiêu truyền tải hoặc đối tượng người xem. Vì vậy, em vẫn cần đánh giá, lựa chọn và chỉnh sửa để sản phẩm cuối cùng có tính chính xác, hấp dẫn và mang dấu ấn cá nhân.</p>
+<h3 class="doc-h3">4. Các vấn đề đạo đức cần cân nhắc</h3>
+<p class="doc-p">Trong quá trình thực hiện dự án video giới thiệu ứng dụng Duolingo với sự hỗ trợ của ChatGPT, DALL·E và Canva AI, em nhận thấy có một số vấn đề đạo đức cần được quan tâm.</p>
+<p class="doc-p">Trước hết là tính trung thực trong học tập và sáng tạo nội dung. AI có thể hỗ trợ mạnh mẽ trong việc tạo ý tưởng, viết kịch bản và thiết kế hình ảnh, nhưng người học cần chủ động chỉnh sửa và đóng góp ý tưởng riêng thay vì sao chép hoàn toàn kết quả do AI tạo ra. Điều này giúp đảm bảo sản phẩm phản ánh năng lực thực sự của người thực hiện.</p>
+<p class="doc-p">Thứ hai là vấn đề bản quyền và quyền sở hữu trí tuệ. Mặc dù các công cụ AI có thể tạo ra nội dung mới, người dùng vẫn cần kiểm tra nguồn dữ liệu, hình ảnh và âm thanh được sử dụng trong sản phẩm để tránh vi phạm bản quyền hoặc sử dụng tài nguyên không được phép.</p>
+<p class="doc-p">Ngoài ra, tính chính xác của thông tin cũng là yếu tố quan trọng. Một số nội dung do AI tạo ra có thể chưa hoàn toàn chính xác hoặc cập nhật. Vì vậy, người sử dụng cần kiểm chứng thông tin trước khi đưa vào sản phẩm cuối cùng, đặc biệt đối với các nội dung giới thiệu tính năng và lợi ích của ứng dụng.</p>
+<p class="doc-p">Cuối cùng, người dùng cần chú ý đến quyền riêng tư và bảo mật dữ liệu khi sử dụng các công cụ AI. Không nên cung cấp thông tin cá nhân hoặc dữ liệu nhạy cảm cho hệ thống AI nếu không thực sự cần thiết.</p>
+<p class="doc-p">Qua dự án này, em nhận thấy AI là một công cụ hỗ trợ sáng tạo hiệu quả, nhưng việc sử dụng AI cần đi kèm với trách nhiệm, sự minh bạch và ý thức tôn trọng các chuẩn mực đạo đức trong học tập và sáng tạo nội dung.</p>
+        </div>
+        <div id="content-bt6">
+            <div class="doc-table-wrapper"><table class="doc-table">
+<tr>
+<td>Họ và tên </td>
+<td>: Lê Đào Như Quỳnh  </td>
+</tr>
+<tr>
+<td>Mã sinh viên </td>
+<td>: 25080167 </td>
+</tr>
+<tr>
+<td>Lớp </td>
+<td>: VNU1001- E252036 </td>
+</tr>
+</table></div>
+<p class="doc-p"><strong> </strong></p>
+<p class="doc-p"><strong>BÀI TẬP BÀI 6 </strong></p>
+<p class="doc-p"><strong> </strong><em><strong>Bài tập 4: Sử dụng AI có trách nhiệm trong học tập và nghiên cứu </strong></em></p>
+<h4 class="doc-h4">ĐỀ BÀI</h4>
+<p class="doc-p"><strong>Mục tiêu:</strong> Phát triển kỹ năng sử dụng AI có trách nhiệm và đạo đức trong học tập và nghiên cứu.</p>
+<p class="doc-p"><strong>Yêu cầu:</strong></p>
+<p class="doc-p">Nghiên cứu chính sách của trường đại học của bạn (hoặc một trường đại học lớn ở Việt Nam) về việc sử dụng AI trong học tập và nghiên cứu.</p>
+<p class="doc-p">Chọn một nhiệm vụ học tập (viết bài luận, chuẩn bị thuyết trình, tổng hợp tài liệu) và thực hiện với sự hỗ trợ của AI:</p>
+<p class="doc-p">Phân tích các vấn đề đạo đức liên quan đến việc sử dụng AI trong học thuật:</p>
+<p class="doc-p">Xây dựng bộ nguyên tắc cá nhân (5-7 nguyên tắc) về cách sử dụng AI có trách nhiệm trong học tập.</p>
+<p class="doc-p">Tạo một infographic minh họa "Sử dụng AI có trách nhiệm trong học thuật".</p>
+<h4 class="doc-h4">BÀI LÀM</h4>
+<p class="doc-p"><strong>1. Nghiên cứu chính sách của trường đại học của bạn (hoặc một trường đại học lớn ở Việt Nam) về việc sử dụng AI trong học tập và nghiên cứu. </strong></p>
+<p class="doc-p">Lựa chọn: Trường Quản trị Kinh doanh (ĐHQGHN)</p>
+<p class="doc-p">Nguồn tham khảo:</p>
+<p class="doc-p">1,<span class="doc-link"> </span><span class="doc-link">https://vnu.edu.vn/ung</span><span class="doc-link">-</span><span class="doc-link">dung</span><span class="doc-link">-</span><span class="doc-link">ai</span><span class="doc-link">-</span><span class="doc-link">dam</span><span class="doc-link">-</span><span class="doc-link">bao</span><span class="doc-link">-</span><span class="doc-link">hieu</span><span class="doc-link">-</span><span class="doc-link">qua</span><span class="doc-link">-</span><span class="doc-link">trong</span><span class="doc-link">-</span><span class="doc-link">nghien</span><span class="doc-link">-</span><span class="doc-link">cuu</span><span class="doc-link">-</span><span class="doc-link">khoa</span><span class="doc-link">-</span><span class="doc-link">hoc</span><span class="doc-link">post38841.html</span><span class="doc-link"> </span></p>
+<p class="doc-p">2, <span class="doc-link">https://www.hsb.edu.vn/recruitment</span><span class="doc-link">-</span><span class="doc-link">policy/academic</span><span class="doc-link">-</span><span class="doc-link">integrity</span><span class="doc-link"> </span></p>
+<p class="doc-p">3, <span class="doc-link">https://www.huit.harvard.edu/ai/guidelines</span><span class="doc-link"> </span></p>
+<p class="doc-p">4, Tìm hiểu và trải nghiệm cá nhân khi trực tiếp theo học tại trường  <strong>.</strong></p>
+<p class="doc-p">Sự bùng nổ của trí tuệ nhân tạo (AI) đã tạo ra một bước ngoặt lớn trong phương thức học tập và nghiên cứu khoa học tại các trường đại học. Với khả năng xử lý dữ liệu khổng lồ, hỗ trợ tổng hợp thông tin và gợi mở ý tưởng, AI đang trở thành người trợ lý đắc lực cho sinh viên. Tuy nhiên, sự tiện lợi này cũng đi kèm với những thách thức về liêm chính học thuật nếu sinh viên lạm dụng quá mức. Hiện nay, trong khi nhiều cơ sở giáo dục tại Việt Nam vẫn đang trong quá trình xây dựng khung pháp lý về AI, thì Đại học Quốc gia Hà Nội (VNU) và đặc biệt là Trường Quản trị và Kinh doanh (HSB) đã có những bước đi tiên phong, thể hiện quan điểm cởi mở nhưng vẫn đảm bảo tính kỷ luật.</p>
+<p class="doc-p">Về mặt chủ trương, HSB không coi AI là "kẻ thù" của học thuật mà định vị đây là một công cụ công nghệ hiện đại. Nhà trường khuyến khích sinh viên tận dụng AI để tối ưu hóa quy trình học tập như: lên dàn ý, cải thiện diễn đạt ngôn ngữ hoặc phân loại dữ liệu. Cách tiếp cận này cho thấy HSB luôn cập nhật với xu hướng số hóa, xem việc làm chủ công nghệ là một phần trong hành trang của người học.</p>
+<p class="doc-p">Tuy nhiên, sự cởi mở này đi kèm với các nguyên tắc nghiêm ngặt về liêm chính học thuật. HSB yêu cầu sinh viên phải duy trì vai trò chủ thể trong việc sáng tạo; mọi hành vi phó mặc bài làm cho AI, sao chép nội dung thiếu tư duy cá nhân hay tạo dữ liệu ảo đều bị xem là vi phạm đạo đức học thuật. Để giám sát thực thi, nhà trường đã tích hợp các công cụ chuyên sâu như Turnitin để phát hiện nội dung do AI tạo ra. Dù vậy, nhà trường vẫn rất tỉnh táo khi hiểu rằng công nghệ chỉ mang tính tương đối, do đó luôn đề cao sự kiểm định và đánh giá chuyên môn trực tiếp từ phía giảng viên.</p>
+<p class="doc-p">Khi đặt trong tương quan với các mô hình quốc tế như Harvard hay VinUniversity, có thể thấy chính sách của VNU/HSB có sự đồng nhất ở tư duy "sử dụng AI có trách nhiệm và minh bạch". Dù các trường quốc tế thường có những quy định chi tiết hơn cho từng dạng bài tập cụ thể, nhưng định hướng của HSB hiện nay là hoàn toàn phù hợp với bối cảnh giáo dục tại Việt Nam.</p>
+<p class="doc-p">Theo quan điểm của em, đây là hướng đi đúng đắn. AI chỉ thực sự phát huy giá trị khi nó phục vụ tư duy phản biện và khả năng sáng tạo của con người, chứ không phải là công cụ để lấp đầy khoảng trống tri thức. Trong tương lai, nếu nhà trường ban hành thêm các văn bản hướng dẫn chi tiết về "ngưỡng" sử dụng AI cho từng môn học, sinh viên sẽ có cơ sở vững chắc hơn để khai thác công nghệ một cách tối ưu và an toàn.</p>
+<p class="doc-p"><strong>2. Chọn một nhiệm vụ học tập (viết bài luận, chuẩn bị thuyết trình, tổng hợp tài liệu) và thực hiện với sự hỗ trợ của AI: </strong></p>
+<p class="doc-p">Lựa chọn: chuẩn bị kịch bản cho talkshow phỏng vấn 1 chuyên gia Marketing nội dung cần hướng tới việc rút ra bài học thực tế cho sinh viên: hành trình nghề nghiệp, kỹ năng cần có, thái độ làm việc, kinh nghiệm vượt khó, bài học chọn nghề, xây dựng uy tín cá nhân hoặc các vấn đề liên quan đến chủ đề học phần.</p>
+<p class="doc-p">Ghi lại các prompt đã sử dụng</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt6_extracted/media/image1.jpg" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p">Ghi lại đầu ra của AI</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt6_extracted/media/image2.jpg" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt6_extracted/media/image3.jpg" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p">Mô tả cách bạn đánh giá, chỉnh sửa và tích hợp đầu ra của AI</p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt6_extracted/media/image4.jpg" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt6_extracted/media/image5.jpg" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt6_extracted/media/image6.jpg" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+<p class="doc-p">Trích dẫn việc sử dụng AI một cách minh bạch</p>
+<p class="doc-p"><em>“Tác giả sử dụng AI như một công cụ hỗ trợ để xây dựng định hướng câu hỏi và rà soát văn phong. Các nội dung phỏng vấn, nhận xét và kết luận cuối cùng đều được tác giả tự biên tập, đánh giá và chịu trách nhiệm.” </em></p>
+<p class="doc-p"><strong>3. Phân tích các vấn đề đạo đức liên quan đến việc sử dụng AI trong học thuật: </strong></p>
+<li class="doc-li">Ranh giới giữa hỗ trợ học tập và gian lận học thuật</li>
+<p class="doc-p">Sự phát triển của AI đã mang đến nhiều công cụ hỗ trợ hữu ích cho sinh viên trong quá trình học tập. AI có thể giúp giải thích các khái niệm phức tạp, gợi ý ý tưởng, xây dựng dàn ý hoặc hỗ trợ chỉnh sửa câu từ. Khi được sử dụng theo cách này, AI đóng vai trò như một người trợ lý học tập, giúp người học tiếp cận kiến thức hiệu quả hơn mà không làm mất đi vai trò chủ động của họ.</p>
+<p class="doc-p">Tuy nhiên, vấn đề đạo đức xuất hiện khi người học lạm dụng AI để thực hiện phần lớn hoặc toàn bộ bài tập rồi nộp dưới danh nghĩa sản phẩm cá nhân. Trong trường hợp đó, bài làm không còn phản ánh đúng năng lực, kiến thức và công sức của sinh viên. Điều này có thể bị xem là gian lận học thuật vì đi ngược lại mục tiêu đánh giá năng lực thực sự của người học. Do đó, AI nên được sử dụng để hỗ trợ quá trình học tập chứ không thay thế hoàn toàn tư duy và sự sáng tạo của con người.</p>
+<li class="doc-li">Vấn đề quyền sở hữu trí tuệ và trích dẫn nguồn</li>
+<p class="doc-p">Một khía cạnh đạo đức quan trọng khác là quyền sở hữu trí tuệ. Nội dung do AI tạo ra thường được hình thành từ quá trình học hỏi trên lượng dữ liệu rất lớn từ nhiều nguồn khác nhau. Vì vậy, nếu sinh viên sao chép trực tiếp nội dung do AI cung cấp mà không chỉnh sửa, không kiểm tra hoặc không trích dẫn phù hợp thì có nguy cơ vi phạm quy định về đạo văn.</p>
+<p class="doc-p">Bên cạnh đó, AI đôi khi có thể tạo ra thông tin không chính xác hoặc đưa ra những tài liệu tham khảo không tồn tại. Nếu người học sử dụng các thông tin này mà không kiểm chứng, chất lượng và độ tin cậy của bài viết sẽ bị ảnh hưởng. Vì vậy, sinh viên cần có trách nhiệm kiểm tra lại thông tin từ các nguồn chính thống và sử dụng AI một cách minh bạch trong quá trình học tập.</p>
+<li class="doc-li">Tác động đến quá trình học tập và phát triển kỹ năng</li>
+<p class="doc-p">AI mang lại nhiều lợi ích đáng kể như tiết kiệm thời gian tìm kiếm thông tin, hỗ trợ học ngoại ngữ, nâng cao khả năng viết và giúp tiếp cận kiến thức mới một cách nhanh chóng. Khi được sử dụng hợp lý, AI có thể trở thành công cụ hỗ trợ đắc lực giúp nâng cao hiệu quả học tập.</p>
+<p class="doc-p">Tuy nhiên, việc phụ thuộc quá mức vào AI cũng tiềm ẩn nhiều hệ quả tiêu cực. Nếu thường xuyên dựa vào AI để giải quyết bài tập hoặc đưa ra đáp án sẵn có, sinh viên có thể dần mất đi khả năng tự nghiên cứu, tư duy phản biện và kỹ năng giải quyết vấn đề. Về lâu dài, điều này ảnh hưởng đến năng lực học tập cũng như khả năng thích ứng trong môi trường làm việc thực tế. Vì vậy, người học cần xem AI là công cụ hỗ trợ chứ không phải giải pháp thay thế cho sự nỗ lực và quá trình rèn luyện bản thân.</p>
+<p class="doc-p"><strong>Xây dựng bộ nguyên tắc cá nhân (5-7 nguyên tắc) về cách sử dụng AI có trách nhiệm trong học tập. </strong></p>
+<p class="doc-p">Sau khi tìm hiểu về các vấn đề đạo đức trong việc sử dụng AI trong học tập như tính trung thực học thuật, quyền sở hữu trí tuệ và sự phát triển kỹ năng cá nhân, em nhận thấy AI mang lại nhiều lợi ích nhưng cũng cần được sử dụng một cách có trách nhiệm. Vì vậy, em xây dựng cho mình một số nguyên tắc sau:</p>
+<p class="doc-p">1. Sử dụng AI để hỗ trợ học tập, không thay thế việc họcEm xem AI là công cụ giúp học tập hiệu quả hơn chứ không phải là phương tiện để hoàn thành mọi công việc thay mình. Em có thể nhờ AI giải thích kiến thức, gợi ý ý tưởng hoặc hỗ trợ tìm kiếm thông tin, nhưng quá trình phân tích, đánh giá và trình bày vẫn phải do bản thân thực hiện.</p>
+<p class="doc-p">2. Chủ động xác minh thông tinKhông phải mọi thông tin do AI cung cấp đều chính xác hoặc cập nhật. Vì vậy, trước khi sử dụng vào bài tập hay bài nghiên cứu, em sẽ đối chiếu với giáo trình, tài liệu học thuật hoặc các nguồn đáng tin cậy khác để đảm bảo tính chính xác.</p>
+<p class="doc-p">3. Giữ gìn tính trung thực trong học thuậtEm không sử dụng AI để tạo ra toàn bộ bài làm rồi nộp dưới tên của mình. Mọi sản phẩm học tập cần phản ánh đúng kiến thức, khả năng và nỗ lực của bản thân. AI chỉ đóng vai trò hỗ trợ trong quá trình thực hiện.</p>
+<p class="doc-p">4. Tôn trọng bản quyền và nguồn thông tinKhi sử dụng nội dung hoặc ý tưởng được AI gợi ý, em sẽ chọn lọc, chỉnh sửa và phát triển theo cách hiểu của mình thay vì sao chép nguyên văn. Điều này giúp hạn chế nguy cơ đạo văn và thể hiện sự tôn trọng đối với quyền sở hữu trí tuệ.</p>
+<p class="doc-p">5. Minh bạch về việc sử dụng AITrong những trường hợp được yêu cầu, em sẽ ghi nhận hoặc thông báo việc có sử dụng AI hỗ trợ. Sự minh bạch giúp nâng cao tính trách nhiệm và đảm bảo các chuẩn mực đạo đức trong học tập.</p>
+<p class="doc-p">6. Cân bằng giữa công nghệ và năng lực cá nhânEm sẽ ưu tiên tự suy nghĩ, tự giải quyết vấn đề trước khi tìm đến AI. Chỉ khi gặp khó khăn hoặc cần thêm góc nhìn tham khảo, em mới sử dụng AI để hỗ trợ. Điều này giúp duy trì khả năng tự học và tính chủ động.</p>
+<p class="doc-p">7. Sử dụng AI để nâng cao tư duy phản biệnThay vì chỉ nhận câu trả lời có sẵn, em sẽ tận dụng AI để đặt câu hỏi, phân tích nhiều quan điểm khác nhau và kiểm tra lại lập luận của mình. Qua đó, AI trở thành công cụ giúp phát triển tư duy phản biện và khả năng học tập lâu dài.</p>
+<p class="doc-p"><strong> </strong></p>
+<p class="doc-p"><strong> </strong></p>
+<p class="doc-p"><strong>Tạo một infographic minh họa "Sử dụng AI có trách nhiệm trong học thuật". </strong></p>
+<p class="doc-p"><div class="doc-image-container"><img class="doc-image" src="bt6_extracted/media/image9.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div><div class="doc-image-container"><img class="doc-image" src="bt6_extracted/media/image10.png" alt="Image" /><p class="doc-image-caption">Hình ảnh từ bài tập</p></div></p>
+        </div>
+    </div>
+
+    <!-- ===== DETAIL MODAL WINDOW ===== -->
+    <div class="modal" id="exerciseModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="modal-title-wrap">
+                    <h3 id="modalTitle">Tên bài tập</h3>
+                    <div class="modal-subtitle">
+                        <span id="modalMeta"><i class="fa-solid fa-file-word"></i> Chi tiết bài tập</span>
+                    </div>
+                </div>
+                <button class="modal-close" id="modalClose" aria-label="Close modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="doc-content-wrapper" id="modalDocBody">
+                    <!-- Dynamic Document Content Injected Here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== LIGHTBOX WINDOW ===== -->
+    <div class="lightbox" id="imageLightbox">
+        <span class="lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></span>
+        <img id="lightboxImg" src="" alt="Preview">
+    </div>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // ===== NAV BAR SCROLL EFFECT =====
+        const mainNav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                mainNav.classList.add('scrolled');
+            } else {
+                mainNav.classList.remove('scrolled');
+            }
+        });
+
+        // ===== MOBILE MENU TOGGLE =====
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = navToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.className = 'fa-solid fa-xmark';
+            } else {
+                icon.className = 'fa-solid fa-bars';
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        const links = navLinks.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                navToggle.querySelector('i').className = 'fa-solid fa-bars';
+            });
+        });
+
+        // ===== TYPEWRITER ANIMATION =====
+        const typedTextSpan = document.getElementById('typedText');
+        const roles = [
+            "Sinh viên chuyên ngành Marketing & Truyền thông",
+            "Sáng tạo nội dung truyền thông số",
+            "Đam mê ứng dụng công nghệ & AI",
+            "Tư duy chiến lược, hành động sáng tạo"
+        ];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentRole = roles[roleIndex];
+            if (isDeleting) {
+                typedTextSpan.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typedTextSpan.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typingSpeed = 100;
+            if (isDeleting) typingSpeed = 40;
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                typingSpeed = 2000; // Pause at end of word
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                typingSpeed = 500; // Pause before typing next word
+            }
+
+            setTimeout(type, typingSpeed);
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(type, 1000);
+        });
+
+        // ===== SCROLL PROGRESS BAR =====
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (window.scrollY / totalHeight) * 100;
+            scrollProgress.style.width = progress + '%';
+        });
+
+        // ===== MOUSE SPOTLIGHT TRACKING =====
+        const mouseGlow = document.getElementById('mouseGlow');
+        document.addEventListener('mousemove', (e) => {
+            mouseGlow.style.left = e.clientX + 'px';
+            mouseGlow.style.top = e.clientY + 'px';
+        });
+
+        // ===== PARTICLE SYSTEM CANVAS =====
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let mouseX = 0, mouseY = 0;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.6;
+                this.speedX = (Math.random() - 0.5) * 0.35;
+                this.speedY = (Math.random() - 0.5) * 0.35;
+                this.opacity = Math.random() * 0.4 + 0.1;
+                // Soft warm terracotta and orange palettes
+                const colors = ['176,106,87', '200,143,120', '219,163,140', '128,96,83'];
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                // Mouse interaction - slightly repels particles
+                const dx = mouseX - this.x;
+                const dy = mouseY - this.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 100) {
+                    this.x -= dx * 0.008;
+                    this.y -= dy * 0.008;
+                }
+
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${this.color}, ${this.opacity})`;
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            const count = Math.min(80, Math.floor(window.innerWidth * 0.05));
+            particles = [];
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+        initParticles();
+
+        function drawLines() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 130) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        const alpha = (1 - dist/130) * 0.08;
+                        ctx.strokeStyle = `rgba(176, 106, 87, ${alpha})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            drawLines();
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // ===== BACK TO TOP BUTTON =====
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        // ===== STATS COUNT UP ANIMATION =====
+        const revealElements = document.querySelectorAll('.reveal');
+        const countElements = document.querySelectorAll('.stat-number');
+        let animatedStats = false;
+
+        function animateStats() {
+            countElements.forEach(elem => {
+                const target = parseInt(elem.getAttribute('data-target'));
+                let count = 0;
+                const speed = target / 50; // speed divider
+                const updateCount = () => {
+                    if (count < target) {
+                        count += Math.ceil(speed);
+                        if (count > target) count = target;
+                        elem.textContent = count;
+                        setTimeout(updateCount, 20);
+                    } else {
+                        elem.textContent = target;
+                    }
+                };
+                updateCount();
+            });
+            animatedStats = true;
+        }
+
+        // ===== SCROLL REVEAL ACTIVATOR =====
+        function checkReveal() {
+            revealElements.forEach(elem => {
+                const triggerPoint = window.innerHeight * 0.82;
+                const elemTop = elem.getBoundingClientRect().top;
+                if (elemTop < triggerPoint) {
+                    elem.classList.add('active');
+                    // Trigger stats count up if stats card is revealed
+                    if (elem.classList.contains('stats-grid') || elem.querySelector('.stat-number')) {
+                        if (!animatedStats) {
+                            animateStats();
+                        }
+                    }
+                }
+            });
+        }
+        window.addEventListener('scroll', checkReveal);
+        window.addEventListener('load', checkReveal);
+        // Run once on start
+        setTimeout(checkReveal, 200);
+
+        // ===== ASSIGNMENT DETAILED POPUP =====
+        const modal = document.getElementById('exerciseModal');
+        const modalClose = document.getElementById('modalClose');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDocBody = document.getElementById('modalDocBody');
+
+        function openExercise(btIndex, event) {
+            // Prevent navigating if it's a link or button event
+            if (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+
+            const titles = {
+                1: "Bài tập 1: Tìm hiểu về Kỹ năng số & Hệ điều hành",
+                2: "Bài tập 2: Tìm kiếm & Đánh giá nguồn thông tin học thuật",
+                3: "Bài tập 3: Viết Prompt hiệu quả cho các tác vụ học tập",
+                4: "Bài tập 4: Công cụ công nghệ trực tuyến & Làm việc nhóm",
+                5: "Bài tập 5: Ứng dụng AI tạo sinh trong sáng tạo nội dung số",
+                6: "Bài tập 6: Sử dụng AI có trách nhiệm trong học tập"
+            };
+
+            // Set modal title
+            modalTitle.textContent = titles[btIndex];
+            
+            // Get content from the hidden container
+            const hiddenDiv = document.getElementById(`content-bt${btIndex}`);
+            if (hiddenDiv) {
+                modalDocBody.innerHTML = hiddenDiv.innerHTML;
+            } else {
+                modalDocBody.innerHTML = "<p>Đang tải nội dung bài tập...</p>";
+            }
+
+            // Open Modal
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Lock background scrolling
+        }
+
+        // Close Modal
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // ===== LIGHTBOX POPUP =====
+        const lightbox = document.getElementById('imageLightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+
+        function openLightbox(src, caption) {
+            lightboxImg.src = src;
+            lightboxImg.alt = caption;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>

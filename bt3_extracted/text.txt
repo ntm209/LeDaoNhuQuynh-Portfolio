@@ -1,0 +1,200 @@
+VIẾT PROMPT HIỆU QUẢ CHO CÁC TÁC VỤ HỌC TẬP
+Họ và tên sinh viên: Lê Đào Như Quỳnh
+Mã sinh viên: 25080167
+
+Mở đầu: 
+      Trong thời đại công nghệ số hiện nay, mô hình ngôn ngữ lớn (Large Language Models – LLMs) như Chat GPT đã trở thành công cụ hỗ trợ đắc lực trong nhiều lĩnh vực, đặc biệt là học tâp và nghiên cứu. Việc viết prompt hiệu quả giúp khai thác tối đa khả năng của các mô hình này, từ đó nâng cao chất lượng và hiệu quả học tập. Báo cáo này tập trung phân tích cách xây dựng prompt phù hợp cho các tác vụ học tập phổ biến, thử nghiệm và so sánh kết quả để rút ra các nguyên tắc viết prompt hiệu quả.
+I. Lựa chọn và phân tích tác vụ học tập.
+Để khai thác tối đa khả năng của mô hình ngôn ngữ lớn trong học tập, tôi đã lựa chọn 3 tác vụ phổ biến và có tính ứng dụng cao:
+1. Tóm tắt một bài đọc/tài liệu học thuật
+- Mục tiêu: Rút gọn nội dung, giữ lại các ý chính để phục vụ ôn tập hoặc nghiên cứu.
+- Hình thức thực hiện: Cung cấp văn bản đầu vào, yêu cầu mô hình tạo bản tóm tắt súc tích.
+2. Giải thích một khái niệm phức tạp
+- Mục tiêu: Làm rõ nội dung khó hiểu, giúp người học tiếp cận dễ dàng hơn.
+- Hình thức thực hiện: Đưa ra khái niệm, yêu cầu mô hình giải thích theo nhiều cấp độ (cơ bản đến nâng cao) hiểu và áp dụng kiến thức.
+- Hình thức thực hiện: Đặt câu hỏi cụ thể, yêu cầu mô hình trả lời chính xác và có lập luận.
+II. Xây dựng các phiên bản prompt.
+Tóm tắt tài liệu học thuật.
+Prompt cơ bản: “Tóm tắt văn bản sau”.
+Ví dụ: “Tóm tắt bài báo về bảo vệ môi trường”.
+
+- Prompt chi tiết: "Hãy tóm tắt văn bản sau, giữ lại các luận điểm chính, loại bỏ chi tiết phụ."
+        Ví dụ: "Tóm tắt bài báo về bảo vệ môi trường, tập trung vào nguyên nhân và hậu quả chính."
+
+
+
+
+
+
+
+
+
+
+
+- Prompt nâng cao: "Bạn là một trợ lý học thuật. Hãy tóm tắt văn bản sau theo cấu trúc: 1) Chủ đề chính, 2) Các luận điểm chính, 3) Kết luận."
+Ví dụ: "Bạn là trợ lý học thuật, tóm tắt bài báo về bảo vệ môi trường theo cấu trúc: chủ đề, luận điểm, kết luận."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Giải thích khái niệm phức tạp
+Prompt cơ bản: “giải thích định luật bảo toàn năng lượng”.
+Ví dụ: “Định luật bảo toàn năng lượng là gì?”
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Prompt chi tiết: “giải thích định luật bảo toàn năng lượng trong vật lý, dành cho sinh viên năm nhất’.
+Ví dụ: “Hãy giải thích định luật bảo toàn năng lượng cho sinh viên năm nhất”.
+
+
+
+
+
+
+
+
+
+
+
+
+Prompt nâng cao: “Bạn là giảng viên vật lý. Hãy giải thích định luật bảo toàn năng lượng bằng cách sử dụng ứng dụng thực tế, sau đó liên hệ với các ứng dụng trong đời sống và kĩ thuật”.
+Ví dụ: “giải thích định luật bảo toàn năng lượng với ví dụ về con lắc đơn và ứng dụng trong kĩ thuật năng lượng tái tạo”.
+   
+Trả lời hỏi đáp.
+- Prompt cơ bản: "Trả lời câu hỏi: Tình cảm gia đình là gì?"
+  Ví dụ: "Tình cảm gia đình là sự gắn bó và yêu thương giữa các thành viên trong gia đình."
+
+- Prompt chi tiết: "Giải thích ý nghĩa của tình cảm gia đình trong cuộc sống con người."
+    Ví dụ: "Tình cảm gia đình giúp tạo nên sự ổn định tinh thần, hỗ trợ phát triển cá nhân và xây dựng mối  quan hệ xã hội bền vững."
+
+
+
+
+
+
+
+
+
+
+- Prompt nâng cao: "Bạn là một nhà tâm lý học. Hãy phân tích sâu sắc về vai trò và ảnh hưởng của tình cảm gia đình đối với sự phát triển cá nhân và xã hội."
+Ví dụ: "Tình cảm gia đình đóng vai trò then chốt trong việc hình thành nhân cách, ảnh hưởng đến sức khỏe tâm thần và khả năng thích nghi xã hội của mỗi cá nhân. Nó còn góp phần duy trì các giá trị văn hóa và sự phát triển bền vững của xã hội”. 
+
+
+
+
+
+
+
+
+
+
+III. Thử nghiệm và so sánh kết quả.
+Tôi đã sử dụng Chat GPT để thử nghiệm các prompt trên. Dưới đây là bảng so sánh kết quả:
+
+Tác vụ
+Phiên bản
+Độ dài đầu ra
+Mức độ chính xác
+Tính logic
+Tính sáng tạo
+Tóm tắt
+Cơ bản
+Ngắn
+Trung bình
+Thấp
+Thấp
+Tóm tắt
+Chi tiết
+Vừa
+Tốt
+Tốt
+Trung bình
+Tóm tắt
+Nâng cao
+Dài 
+Rất tốt
+Rất tốt
+Cao 
+Giải thích 
+Cơ bản
+Ngắn
+Trung bình
+Thấp
+Thấp
+Giải thích
+Chi tiết
+Vừa
+Tốt
+Tốt
+Trung bình
+Giải thích
+Nâng cao
+Dài 
+Rất tốt
+Rất tốt
+Cao 
+Hỏi đáp
+Cơ bản
+Ngắn
+Trung bình
+Thấp
+Thấp
+Hỏi đáp
+Chi tiết
+Vừa
+Tốt
+Tốt
+Trung bình
+Hỏi đáp
+Nâng cao
+Dài 
+Rất tốt
+Rất tốt
+Cao 
+IV. Phân tích hiệu quả prompt.
+Qua thử nghiệm, tôi nhận thấy:
+Prompt nâng cao tạo ra kết quả chất lượng hơn nhờ vào việc định hướng vai trò và cấu trúc rõ ràng.
+Việc sử dụng kỹ thuật như role prompting giúp mô hình hiểu ngữ cảnh và mục tiêu tốt hơn.
+Prompt có ví dụ (few-shot) giúp mô hình bắt chước cách trả lời chính xác hơn.
+Prompt càng rõ ràng, kết quả càng logic và dễ hiểu.
+V. Tổng hợp nguyên tắc và trình bày báo cáo.
+ Nguyên tắc viết prompt hiệu quả:
+Xác định rõ mục tiêu: Prompt cần thể hiện rõ yêu cầu đầu ra.
+Định hướng vai trò: Sử dụng role prompting để mô hình hiểu vai trò của mình.
+Cấu trúc rõ ràng: chia nhỏ yêu cầu theo từng bước hoặc mục.
+Cung cấp ví dụ: Nếu có thể, đưa ra ví dụ để mô hình học theo.
+Ngôn ngữ cụ thể: Tránh dung từ mơ hồ, nên dung từ ngữ chính xác.
+VI. Kết luận.
+Việc viết prompt hiệu quả đóng vai trò then chốt trong việc khai thác tối đa tiềm năng của các mô hình ngôn ngữ lớn trong học tập và nghiên cứu. Qua báo cáo này, có thể thấy rằng prompt càng chi tiết, rõ ràng và có định hướng vai trò cụ thể thì kết quả trả về càng chính xác, logic và sáng tạo hơn. Việc áp dụng các nguyên tắc như xác định mục tiêu rõ ràng, cấu trúc mạch lạc, cung cấp ví dụ minh họa và sử dụng ngôn ngữ cụ thể giúp nâng cao hiệu quả giao tiếp với mô hình.
+Ngoài ra, thử nghiệm cho thấy prompt nâng cao không chỉ cải thiện chất lượng nội dung mà còn giúp người học phát triển tư duy phản biện và khả năng phân tích sâu sắc hơn. Do đó, việc đầu tư thời gian và công sức để xây dựng prompt phù hợp là rất cần thiết cho các tác vụ học tập hiện đại.
+Hy vọng báo cáo này sẽ là tài liệu tham khảo hữu ích cho việc ứng dụng AI trong học tập, đồng thời góp phần nâng cao kỹ năng viết prompt cho người học và nhà nghiên cứu.
+ 
+
+ 

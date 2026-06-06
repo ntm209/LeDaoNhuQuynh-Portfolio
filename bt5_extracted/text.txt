@@ -1,0 +1,100 @@
+Họ và tên
+: Lê Đào Như Quỳnh
+Mã sinh viên 
+: 25080167
+Lớp
+: MAC 6A – HSB
+
+BÀI TẬP BÀI 5: NHẬP MÔN CÔNG NGHỆ THÔNG TIN VÀ TRÍ TUỆ NHÂN TẠO
+
+ĐỀ BÀI
+I. Mục tiêu: Thành thạo việc sử dụng các công cụ AI tạo sinh để hỗ trợ quá trình sáng tạo nội dung số.
+II. Yêu cầu:
+1. Chọn một dự án sáng tạo nội dung (bài thuyết trình, bài viết, infographic, hoặc video ngắn).
+2. Sử dụng ít nhất 3 công cụ AI tạo sinh khác nhau để hỗ trợ quá trình sáng tạo:
+- Công cụ AI tạo văn bản (ChatGPT, Google Gemini, Claude)
+- Công cụ AI tạo hình ảnh (DALL-E, Midjourney, Stable Diffusion)
+- Công cụ AI hỗ trợ thiết kế (Canva AI, Adobe Firefly)
+3. Ghi lại chi tiết quá trình sử dụng AI:
+- Các prompt đã sử dụng và kết quả nhận được
+- Cách bạn chỉnh sửa và tích hợp đầu ra của AI
+- So sánh kết quả từ các công cụ AI khác nhau
+4. Hoàn thiện dự án bằng cách kết hợp đầu ra của AI với đóng góp sáng tạo của riêng bạn.
+5. Viết phân tích về vai trò của AI trong quá trình sáng tạo, bao gồm:
+- Những phần AI làm tốt và những phần còn hạn chế
+- Cách AI thay đổi quy trình sáng tạo của bạn
+- Các vấn đề đạo đức cần cân nhắc
+BÀI LÀM
+I, Lựa chọn
+Dự án được chọn sáng tạo nội dung: video ngắn giới thiệu về ứng dụng Elsa speak - ứng dụng học tiếng anh ứng dụng AI
+Sử dụng ít nhất 3 công cụ AI tạo sinh khác nhau để hỗ trợ quá trình sáng tạo:
+- Công cụ AI tạo văn bản: ChatGPT
+- Công cụ AI tạo hình ảnh: DALL-E
+- Công cụ AI hỗ trợ thiết kế: Canva AI
+II, Thực hành các bước
+1, Lên ý tưởng & nghiên cứu 
+Trong thời đại công nghệ số hiện nay, việc học ngoại ngữ đã không còn là một áp lực nặng nề nhờ sự hỗ trợ của các ứng dụng thông minh, trong đó nổi bật nhất là Duolingo. Khác với phương pháp học truyền thống đầy khô khan, Duolingo đã áp dụng thành công mô hình 'trò chơi hóa' , biến mỗi bài học thành một thử thách thú vị với điểm kinh nghiệm, bảng xếp hạng và những phần thưởng hấp dẫn. Với cấu trúc bài học ngắn gọn chỉ từ 5 đến 10 phút, ứng dụng này giúp người học dễ dàng duy trì thói quen học tập hàng ngày. Đặc biệt, tính năng duy trì chuỗi ngày (streak) cùng sự đồng hành của chú cú xanh 'Duo' không chỉ tạo ra động lực tích cực mà còn giúp người dùng cảm thấy hứng thú hơn trên hành trình chinh phục ngôn ngữ mới. Bằng cách cá nhân hóa lộ trình học tập thông qua trí tuệ nhân tạo, Duolingo thực sự đã thay đổi cách chúng ta tiếp cận ngoại ngữ, khiến việc học trở nên gần gũi và hiệu quả hơn bao giờ hết
+2, Lập kế hoạch
+Sản phẩm hướng tới: Viết kịch bản video ngắn (60-90s) giới thiệu ứng dụng Duolingo. Tập trung làm nổi bật tính năng: học ngoại ngữ như chơi game, các bài học ngắn gọn 5 phút/ngày, và sự thúc đẩy từ hệ thống streak (chuỗi ngày học) để tránh bị 'Duo' nhắc nhở
+Ứng dụng 1 số công nghệ AI tạo sinh để hỗ trợ 
+- Công cụ AI tạo văn bản: ChatGPT
+- Công cụ AI tạo hình ảnh: DALL-E
+- Công cụ AI hỗ trợ thiết kế: Canva AI
+
+Tạo kịch bản :
+
+Chỉnh sửa prompt :
+
+
+3, Sản xuất
+Sau khi chỉnh sửa kịch bản nhiều lần, em đã ưng ý và quyết định sử dụng kịch bản đó
+Bắt tay vào sản xuất, em sẽ đi tạo những hình ảnh để chèn vào video
+Pic 1: Một sinh viên ngồi trước bàn học với cuốn sách tiếng Anh dày cộp, vẻ mặt chán nản.
+
+Pic 2 : Hiện logo Duolingo và giao diện ứng dụng.
+
+Pic 3 :Quay màn hình các dạng bài tập đơn giản
+
+Pic 4: Hiệu ứng XP tăng sau khi hoàn thành bài học.
+
+Pic 5: Hiện bảng xếp hạng hằng tuần.
+
+Pic 6 : Đồng hồ hiện 11 giờ 58 phút tối
+
+Pic 7 : Tổng hợp các cảnh học tập vui vẻ.
+
+Sau đó, em sẽ kết luận lại rằng: việc học tập ứng dụng trí tuệ nhân tạo Doulingo là 1 hình thức mới, đem đến nhiều tiện ích cho người học.
+4, Biên tập & tinh chỉnh
+Sau bước sản xuất, em đã cắt ghép, chỉnh sửa video các hình ảnh bằng canva, sau đó lồng tiếng, kiểm tra kĩ với các nội dung và hiệu ứng của video.
+
+5, Sản xuất & phân phối
+Sau khi biên tập video bằng canva, em đã xuất video ra với chất lượng hình ảnh đạt chuẩn sau đó update lên các nền tảng mà em mong muốn tiếp cận với người xem
+6, Đo lường & tối ưu
+Sau khi update lên nền tảng facebook, việc đo lường hiệu quả bằng phản hồi, những con số biết nói đó là lượt thích, lượt xem, lượt chia sẻ. Từ những phản hồi đó thì chúng ta có thể rút ra những bài học, lưu ý cho những nội dung tiếp theo để sản phẩm tới tay người xem được chỉn chu và hoàn thiện nhất có thể 
+III, Nghiệm thu
+1, 1 số hình ảnh em đã tạo được nhờ AI
+2. Những phần AI làm tốt và những phần còn hạn chế
+Công cụ
+Làm tốt
+Chưa tốt
+ChatGPT
+Hỗ trợ xây dựng kịch bản video rõ ràng, logic và phù hợp với mục tiêu giới thiệu ứng dụng Duolingo. Gợi ý nội dung về các tính năng như bài học 5 phút, hệ thống XP, bảng xếp hạng và chuỗi ngày học. Tiết kiệm đáng kể thời gian lên ý tưởng và viết lời thoại.
+Nội dung đôi khi còn mang tính tổng quát, thiếu ví dụ thực tế. Một số câu văn cần chỉnh sửa để phù hợp với phong cách thuyết minh và đối tượng người xem là sinh viên.
+DALL·E
+Tạo hình ảnh minh họa sinh động về việc học ngoại ngữ, nhân vật sử dụng Duolingo và các yếu tố gamification như điểm XP, huy hiệu và bảng xếp hạng. Hình ảnh có tính sáng tạo và thu hút người xem.
+Một số chi tiết chưa hoàn toàn giống giao diện thực tế của Duolingo. Chữ xuất hiện trong ảnh đôi khi bị lỗi hoặc khó đọc. Cần lựa chọn và chỉnh sửa để đảm bảo tính thống nhất của video.
+Canva AI
+Hỗ trợ thiết kế và dựng video nhanh chóng với nhiều mẫu có sẵn. Dễ dàng kết hợp hình ảnh AI, văn bản, hiệu ứng chuyển cảnh và nhạc nền để tạo video hoàn chỉnh.
+Khả năng tùy chỉnh nâng cao còn hạn chế so với các phần mềm dựng video chuyên nghiệp. Một số mẫu thiết kế có thể bị trùng lặp nếu không chỉnh sửa thêm.
+3. Cách AI thay đổi quy trình sáng tạo của bạn
+Việc ứng dụng trí tuệ nhân tạo (AI) đã làm thay đổi đáng kể quy trình sáng tạo nội dung của em trong dự án xây dựng video giới thiệu ứng dụng Duolingo. Trước đây, khi thực hiện một video, em thường phải tự tìm ý tưởng, viết kịch bản, tìm kiếm hình ảnh minh họa và sau đó mới tiến hành thiết kế và dựng video. Quá trình này tốn khá nhiều thời gian, đặc biệt ở giai đoạn lên ý tưởng và tìm tài nguyên phù hợp.
+Khi sử dụng các công cụ AI như ChatGPT, DALL·E và Canva AI, quy trình làm việc trở nên nhanh chóng và hiệu quả hơn. ChatGPT giúp em xây dựng kịch bản video, đề xuất cách giới thiệu các tính năng nổi bật của Duolingo như bài học ngắn 5 phút, hệ thống tích điểm XP, bảng xếp hạng cạnh tranh và chuỗi ngày học liên tục. DALL·E hỗ trợ tạo các hình ảnh minh họa theo đúng ý tưởng mà không cần mất nhiều thời gian tìm kiếm trên Internet. Sau đó, Canva AI giúp em sắp xếp bố cục, thêm hiệu ứng và hoàn thiện video trong thời gian ngắn.
+Nhờ AI, quy trình sáng tạo không còn diễn ra theo từng bước tách biệt mà trở nên linh hoạt hơn. Em có thể liên tục chỉnh sửa nội dung, thử nghiệm hình ảnh và hoàn thiện thiết kế cùng lúc. Điều này giúp tiết kiệm thời gian và tạo điều kiện để thử nghiệm nhiều ý tưởng sáng tạo khác nhau.
+Tuy nhiên, AI không thể thay thế hoàn toàn vai trò của người sáng tạo. Nội dung và hình ảnh do AI tạo ra đôi khi chưa thực sự phù hợp với mục tiêu truyền tải hoặc đối tượng người xem. Vì vậy, em vẫn cần đánh giá, lựa chọn và chỉnh sửa để sản phẩm cuối cùng có tính chính xác, hấp dẫn và mang dấu ấn cá nhân.
+4. Các vấn đề đạo đức cần cân nhắc
+Trong quá trình thực hiện dự án video giới thiệu ứng dụng Duolingo với sự hỗ trợ của ChatGPT, DALL·E và Canva AI, em nhận thấy có một số vấn đề đạo đức cần được quan tâm.
+Trước hết là tính trung thực trong học tập và sáng tạo nội dung. AI có thể hỗ trợ mạnh mẽ trong việc tạo ý tưởng, viết kịch bản và thiết kế hình ảnh, nhưng người học cần chủ động chỉnh sửa và đóng góp ý tưởng riêng thay vì sao chép hoàn toàn kết quả do AI tạo ra. Điều này giúp đảm bảo sản phẩm phản ánh năng lực thực sự của người thực hiện.
+Thứ hai là vấn đề bản quyền và quyền sở hữu trí tuệ. Mặc dù các công cụ AI có thể tạo ra nội dung mới, người dùng vẫn cần kiểm tra nguồn dữ liệu, hình ảnh và âm thanh được sử dụng trong sản phẩm để tránh vi phạm bản quyền hoặc sử dụng tài nguyên không được phép.
+Ngoài ra, tính chính xác của thông tin cũng là yếu tố quan trọng. Một số nội dung do AI tạo ra có thể chưa hoàn toàn chính xác hoặc cập nhật. Vì vậy, người sử dụng cần kiểm chứng thông tin trước khi đưa vào sản phẩm cuối cùng, đặc biệt đối với các nội dung giới thiệu tính năng và lợi ích của ứng dụng.
+Cuối cùng, người dùng cần chú ý đến quyền riêng tư và bảo mật dữ liệu khi sử dụng các công cụ AI. Không nên cung cấp thông tin cá nhân hoặc dữ liệu nhạy cảm cho hệ thống AI nếu không thực sự cần thiết.
+Qua dự án này, em nhận thấy AI là một công cụ hỗ trợ sáng tạo hiệu quả, nhưng việc sử dụng AI cần đi kèm với trách nhiệm, sự minh bạch và ý thức tôn trọng các chuẩn mực đạo đức trong học tập và sáng tạo nội dung.

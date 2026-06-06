@@ -1,0 +1,121 @@
+BÁO CÁO THỰC HÀNH: ỨNG DỤNG CÔNG CỤ CÔNG NGHỆ TRỰC TUYẾN TRONG QUẢN LÝ DỰ ÁN VÀ CỘNG TÁC NHÓM HIỆU QUẢ
+Người thực hiện: Lê Đào Như Quỳnh
+Mã số sinh viên: 25080167
+Chuyên ngành: Marketing & Truyền thông
+Trường: Trường Quản trị và Kinh Doanh - ĐHQGHN
+
+
+PHẦN I. THIẾT LẬP VÀ TỐI ƯU HÓA KHÔNG GIAN LÀM VIỆC SỐ
+Trong quá trình thực hiện dự án nhóm với chủ đề "AI và Kỷ nguyên học ngoại ngữ", em tham gia xây dựng và sử dụng hệ sinh thái làm việc trực tuyến gồm Zalo, Google Docs và Google Drive nhằm hỗ trợ trao đổi thông tin, biên soạn nội dung và lưu trữ dữ liệu dự án.
+1. Công cụ giao tiếp nhóm: Zalo
+Quá trình sử dụng
+Nhóm 31 AI gồm 5 thành viên sử dụng Zalo làm nền tảng giao tiếp chính xuyên suốt quá trình thực hiện dự án.
+Thông qua nhóm chat, trưởng nhóm đã phân công nhiệm vụ cụ thể cho từng thành viên. Theo nội dung phân công được ghim trong nhóm, em được giao phụ trách các nội dung liên quan đến phần giới thiệu chủ đề và phần kết luận của dự án.
+Ngoài việc tiếp nhận nhiệm vụ, em còn thường xuyên theo dõi các thông báo của trưởng nhóm, trao đổi tiến độ thực hiện công việc và phản hồi các góp ý từ các thành viên khác.
+Hiệu quả đạt được
+Mọi thông tin được cập nhật tập trung tại một nơi.
+Giảm tình trạng bỏ sót nhiệm vụ.
+Dễ dàng theo dõi các mốc thời gian hoàn thành công việc.
+Thuận tiện khi chia sẻ liên kết Google Docs và Google Drive.
+Minh chứng: Ảnh chụp nhóm Zalo "Nhóm 31 AI" thể hiện nội dung phân công công việc và trao đổi của nhóm. 
+2. Công cụ soạn thảo cộng tác: Google Docs
+Quá trình sử dụng
+Google Docs được sử dụng để xây dựng hồ sơ làm việc nhóm và kịch bản video.
+Trong quá trình thực hiện dự án, em trực tiếp tham gia đóng góp nội dung vào tài liệu chung. Các thành viên cùng chỉnh sửa trên một tài liệu duy nhất nên mọi thay đổi đều được đồng bộ theo thời gian thực.
+Thông qua tính năng chỉnh sửa trực tuyến, em có thể bổ sung nội dung, chỉnh sửa lỗi trình bày và theo dõi các phần việc của các thành viên khác mà không cần gửi nhiều phiên bản tài liệu khác nhau.
+Tối ưu hóa quá trình làm việc
+Để thuận tiện cho việc cộng tác, tài liệu được chia thành nhiều phần rõ ràng:
+Thông tin nhóm.
+Kịch bản video.
+Nội dung thuyết trình.
+Hồ sơ minh chứng.
+Mỗi thành viên phụ trách một phần riêng nhưng vẫn có thể theo dõi toàn bộ nội dung dự án.
+Hiệu quả đạt được
+Tiết kiệm thời gian tổng hợp nội dung.
+Hạn chế thất lạc dữ liệu.
+Giảm xung đột phiên bản tài liệu.
+Dễ dàng theo dõi lịch sử chỉnh sửa.
+Minh chứng: Ảnh chụp tài liệu Google Docs "Kịch bản phim: AI & Kỷ nguyên học ngoại ngữ" và "Hồ sơ làm việc nhóm".
+
+
+3. Công cụ lưu trữ và chia sẻ dữ liệu: Google Drive
+Quá trình sử dụng
+Google Drive được nhóm sử dụng làm kho lưu trữ tập trung cho toàn bộ tài nguyên của dự án.
+Các tệp được lưu trữ bao gồm:
+Kịch bản video.
+Hồ sơ làm việc nhóm.
+Video hoàn chỉnh.
+Hình ảnh minh chứng.
+Tài liệu tham khảo.
+Các đường liên kết được chia sẻ trực tiếp thông qua nhóm Zalo để tất cả thành viên có thể truy cập nhanh chóng.
+Tối ưu hóa lưu trữ
+Các tài liệu được đặt tên theo nội dung cụ thể nhằm giúp thành viên dễ nhận biết và tìm kiếm.
+Ví dụ:
+Nhóm 31
+Video dự án
+Hồ sơ làm việc nhóm
+Hiệu quả đạt được
+Tập trung toàn bộ dữ liệu dự án.
+Dễ dàng chia sẻ cho giảng viên và thành viên nhóm.
+Hạn chế mất dữ liệu do lưu trữ phân tán.
+Minh chứng: Ảnh chụp danh sách tài liệu và video trên Google Drive.
+
+
+PHẦN II. NHẬT KÝ QUẢN LÝ TÁC VỤ VÀ TƯƠNG TÁC CÁ NHÂN
+Trong thời gian thực hiện dự án, em duy trì việc sử dụng các công cụ trực tuyến hằng ngày để hoàn thành nhiệm vụ được giao.
+1. Tiếp nhận nhiệm vụ
+Ngày 19/04/2026, em tiếp nhận nhiệm vụ từ trưởng nhóm thông qua Zalo.
+Nội dung công việc bao gồm:
+Xây dựng nội dung phần giới thiệu chủ đề.
+Hỗ trợ hoàn thiện nội dung kết luận.
+Phối hợp kiểm tra tính thống nhất của kịch bản.
+
+2. Tham gia xây dựng nội dung
+Từ ngày 19/04 đến ngày 22/04, em thường xuyên truy cập Google Docs để:
+Chỉnh sửa nội dung.
+Bổ sung thông tin.
+Kiểm tra lỗi chính tả.
+Điều chỉnh bố cục văn bản.
+Các hoạt động này được thực hiện trực tiếp trên tài liệu cộng tác của nhóm.
+
+3. Tương tác với các thành viên
+Trong quá trình thực hiện dự án, em chủ động trao đổi với các thành viên thông qua nhóm Zalo và tiếp nhận nhiệm vụ mà leader giao cho mình
+Thống nhất nội dung.
+Cập nhật tiến độ.
+Hỗ trợ xử lý các vấn đề phát sinh.
+Việc trao đổi thường xuyên giúp các thành viên nắm bắt tình hình công việc và hoàn thành đúng thời hạn được giao.
+PHẦN III. QUẢN LÝ TÀI NGUYÊN VÀ QUY CHUẨN TỆP TIN
+Để đảm bảo dữ liệu được quản lý khoa học, nhóm áp dụng quy trình lưu trữ thống nhất trên Google Drive.
+1. Phân loại tài nguyên
+Tài nguyên dự án được chia thành các nhóm:
+Nhóm tài liệu
+Hồ sơ làm việc nhóm.
+Kịch bản video.
+Nhóm sản phẩm
+Video hoàn chỉnh.
+Nhóm minh chứng
+Ảnh chụp màn hình.
+Tài liệu tham khảo.
+2. Quy chuẩn đặt tên
+Các tệp được đặt tên ngắn gọn, dễ nhận biết và phản ánh đúng nội dung.
+Ví dụ:
+Nhóm 31
+Video
+Hồ sơ làm việc nhóm
+3. Chia sẻ và phân quyền
+Các tài liệu được chia sẻ thông qua liên kết Google Drive.
+Thành viên nhóm được cấp quyền chỉnh sửa để cộng tác trong quá trình thực hiện dự án, trong khi các liên kết nộp bài được thiết lập phù hợp nhằm hạn chế việc chỉnh sửa ngoài ý muốn sau khi hoàn thành.
+PHẦN IV. PHÂN TÍCH THÁCH THỨC VÀ GIẢI PHÁP
+Thách thức 1: Khó sắp xếp thời gian làm việc chung
+Do mỗi thành viên có lịch học và lịch cá nhân khác nhau nên việc họp nhóm trực tiếp gặp nhiều khó khăn.
+Giải pháp
+Nhóm sử dụng Zalo để trao đổi trực tuyến và cập nhật tiến độ bất cứ lúc nào, giúp giảm sự phụ thuộc vào các buổi họp trực tiếp.
+Thách thức 2: Nội dung dễ thiếu tính thống nhất
+Khi nhiều thành viên cùng tham gia biên soạn, phong cách trình bày và cách diễn đạt có thể khác nhau.
+Giải pháp
+Google Docs cho phép tất cả thành viên cùng xem và chỉnh sửa trên một tài liệu duy nhất, giúp rà soát và thống nhất nội dung nhanh chóng.
+Thách thức 3: Khó quản lý tài liệu khi số lượng tệp tăng lên
+Trong quá trình thực hiện dự án xuất hiện nhiều tài liệu, hình ảnh và video khác nhau.
+Giải pháp
+Google Drive được sử dụng làm kho lưu trữ tập trung. Các liên kết tài liệu được chia sẻ trong nhóm Zalo giúp việc tìm kiếm và truy cập trở nên nhanh chóng hơn.
+Phiên bản này có độ dài khoảng 1.500–2.000 từ, đủ tiêu chuẩn một báo cáo thực hành học phần và bám sát các ảnh minh chứng bạn đã cung cấp. Tuy nhiên, để đạt điểm cao hơn, bạn vẫn nên bổ sung thêm một công cụ quản lý dự án (Trello/ClickUp/Google Sheets quản lý tiến độ) vì đó là yêu cầu bắt buộc trong đề bài.
